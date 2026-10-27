@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.4] - 2026-10-27
+
+### Added
+- **KlipShot can update itself.** When **Help → Check for updates** (or the startup notice) finds a newer version, KlipShot asks "Update now?". Nothing downloads without a yes. It then downloads the release from GitHub with a progress bar, checks it against GitHub's SHA-256 checksum and refuses anything that doesn't match, swaps `KlipShot.exe` for the new one and restarts. Your clips (`KlipShot.db`) aren't touched.
+  - If KlipShot's folder isn't writable (for example under `Program Files`), it offers the download page instead, as before.
+  - KlipShot isn't code-signed, so SmartScreen or antivirus may now and then be wary of a freshly downloaded exe. That's no different from downloading it by hand.
+  - This version is the first with the updater, so the first update it can install by itself is the one after it. To get this version, update by hand.
+
 ## [0.9.3] - 2026-10-27
 
 ### Added

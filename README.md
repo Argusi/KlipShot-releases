@@ -22,7 +22,7 @@ KlipShot used to be called Clippy.
 
 No .NET install is needed. To start KlipShot whenever you sign in, tick **Start KlipShot when I sign in to Windows** in **Tools → Settings** (or right-click the tray icon and tick **Start KlipShot when I sign in**). KlipShot starts hidden in the tray; tick **Show the window when KlipShot starts** in Settings to have the window open instead.
 
-To update, quit KlipShot (right-click the tray icon → Quit KlipShot) and replace `KlipShot.exe` with the new one. Your clips are kept.
+To update, choose **Help → Check for updates** and say yes; KlipShot downloads the new version, checks it and restarts. Your clips are kept. You can also update by hand: quit KlipShot (right-click the tray icon → Quit KlipShot) and replace `KlipShot.exe` with the new one.
 
 **Coming from Clippy:** quit Clippy (right-click its tray icon → Quit Clippy), put `KlipShot.exe` in the same folder and delete `Clippy.exe`. The first time KlipShot runs, it takes over your clips, folders and settings (renaming `Clippy.db` to `KlipShot.db`), and replaces Clippy's "start when I sign in" entry with its own.
 
@@ -155,15 +155,23 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 ### Updates
 
-**Help → Check for updates** asks GitHub for the latest version. If there's a newer one, KlipShot offers to open its download page. To update, quit KlipShot and replace `KlipShot.exe`; your clips are kept.
+**Help → Check for updates** asks GitHub for the latest version. If there's a newer one, KlipShot asks whether to update now. Nothing is downloaded unless you say yes. Then KlipShot:
 
-To check automatically, turn on **Check for updates when KlipShot starts** in Tools → Settings. It is off unless you turn it on. KlipShot then checks at most once a day, a few seconds after it starts. It says nothing when you are up to date or offline. When there is a newer version, a notice appears by the clock, and clicking it opens the download page.
+1. Downloads the release zip (about 70 MB) from GitHub, showing its progress. You can cancel.
+2. Checks it against the SHA-256 checksum GitHub publishes for the file, and refuses anything that doesn't match.
+3. Swaps `KlipShot.exe` for the new one and restarts. The old copy is kept as `KlipShot.old.exe` until the new one starts, then deleted.
+
+Your clips and settings (`KlipShot.db`) aren't touched. If KlipShot's folder isn't writable (for example under `Program Files`), it offers to open the download page instead; then quit KlipShot and replace `KlipShot.exe` by hand.
+
+KlipShot isn't code-signed, so Windows SmartScreen or antivirus may now and then be wary of a freshly downloaded `KlipShot.exe`. That's the same whether KlipShot updates itself or you download it by hand.
+
+To check automatically, turn on **Check for updates when KlipShot starts** in Tools → Settings. It is off unless you turn it on. KlipShot then checks at most once a day, a few seconds after it starts. It says nothing when you are up to date or offline. When there is a newer version, a notice appears by the clock, and clicking it asks whether to update.
 
 ## Where your clips are stored
 
 Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so you can move or back up the whole folder. If that folder isn't writable (for example under `Program Files`), KlipShot uses `%LocalAppData%\KlipShot` instead. Help → About shows the exact path.
 
-Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates (or at startup, if you turn that on), and then only to ask GitHub for the latest version number.
+Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates (or at startup, if you turn that on), and then only to ask GitHub for the latest version number. It downloads an update only when you say yes.
 
 See [CHANGELOG.md](CHANGELOG.md) for what's new.
 
