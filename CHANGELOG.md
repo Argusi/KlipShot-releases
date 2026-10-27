@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.12] - 2026-10-27
+
+### Changed
+- **Clicking to clip a pane picks better panes.** A list, table or tree (such as KlipShot's own clip list, or a file list) is now outlined whole, rather than a row, a cell or a few rows of it. A picture is outlined whole too. Web pages in Chrome, Edge and Vivaldi are now seen inside, down to their tables and sidebars, where before only the whole page was found. A pane is no longer outlined across two parts of an app (a toolbar and the table under it, say). And the outline no longer flickers between two panes while the mouse moves inside one: it changes only once it's sure. In web pages, hidden layers (such as YouTube's video previews) are no longer outlined in place of what you see. The outline also shows as soon as F9 is pressed, without moving the mouse.
+
+### Added
+- **Drags snap to edges.** When you drag out a region after F9, its sides snap to a nearby edge, such as a pane's border or the edge of a picture, so the clip lines up with what's there. Hold Alt while dragging to place the sides freely.
+
 ## [0.9.11] - 2026-10-27
 
 ### Changed

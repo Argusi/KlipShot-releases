@@ -69,7 +69,7 @@ Clicking the tray icon opens or hides the window. Right-click it for Open KlipSh
 
 ### Screen clips
 
-Press **F9** anywhere to clip a region. The screen freezes and dims, so open menus and tooltips stay as they were; drag over the part you want, or click to take the outlined window or pane under the mouse. This works in most apps, including ones that only draw their panes, such as games and video. Point at the title bar or edge of a window to take all of it (Esc or a right-click cancels). Press **Print Screen** to clip the whole screen (every monitor). Both are also in the tray icon's menu.
+Press **F9** anywhere to clip a region. The screen freezes and dims, so open menus and tooltips stay as they were; drag over the part you want (its sides snap to nearby edges, such as a pane's border; hold Alt to drag freely), or click to take the outlined window or pane under the mouse. This works in most apps, including ones that only draw their panes, such as games and video. Point at the title bar or edge of a window to take all of it (Esc or a right-click cancels). Press **Print Screen** to clip the whole screen (every monitor). Both are also in the tray icon's menu.
 
 ![The markup editor with an arrow, a box, a highlight, a text label and a blurred API key on a screen clip](docs/markup.png)
 
