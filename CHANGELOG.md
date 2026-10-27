@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.10] - 2026-10-27
+
+### Added
+- **Click to clip a window or pane.** After pressing F9, the window or pane under the mouse (such as a sidebar or a dialog's panel) is outlined. Click without dragging to clip just that; drag as before to pick any region. Point at the title bar or the window's edge to take the whole window. This works inside most apps, including browsers and Office.
+
 ## [0.9.9] - 2026-10-27
 
 ### Added
