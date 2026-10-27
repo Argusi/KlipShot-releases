@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.5] - 2026-10-27
+
+### Changed
+- Nothing new to use. This release lets 0.9.4 try updating itself (Help → Check for updates).
+
 ## [0.9.4] - 2026-10-27
 
 ### Added
