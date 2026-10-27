@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.11] - 2026-10-27
+
+### Changed
+- **Clicking to clip a pane works in many more apps.** After F9, KlipShot now also looks for panes in the picture itself: areas with a border or their own background, such as a sidebar, a toolbar, a list or a chat. So panes are outlined in apps that don't describe their layout to Windows, like Qt apps, games, video and remote desktops. Chrome, Edge, Firefox and apps built on them (Discord, VS Code, Slack…) are also asked to describe their pages as soon as F9 is pressed, so panes inside web pages are found sooner. Pointing at the bare desktop no longer outlines the gaps between windows.
+
 ## [0.9.10] - 2026-10-27
 
 ### Added
