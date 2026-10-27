@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.9.9] - 2026-10-27
+
+### Added
+- **A setup, as well as the portable zip.** Each release now also has `KlipShot-<version>-win-x64-setup.exe`. It installs KlipShot just for you, with no admin rights needed, into `%LocalAppData%\Programs\KlipShot`, and keeps your clips in that same folder. It adds KlipShot to the Start menu, and can add a desktop shortcut and start KlipShot when you sign in. Uninstalling asks whether to delete your clips too, and keeps them unless you say yes. The portable zip works as before.
+- **Installed copies update with the setup.** Help → Check for updates downloads the new setup, checks it, runs it without any questions and restarts KlipShot. The downloaded setup is then deleted.
+- **Import from a portable copy.** The first time an installed KlipShot starts, it offers to bring in the clips, folders, settings and backups of a portable copy. **Import from a portable copy...** in Tools → Settings → Starting up does the same at any time. The portable copy isn't changed.
+
 ## [0.9.8] - 2026-10-27
 
 ### Added

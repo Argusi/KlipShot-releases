@@ -12,17 +12,25 @@ KlipShot used to be called Clippy.
 - Pin clips to the top of the list, and file clips into folders. Lock a folder to keep it as it is.
 - Screen clips: F9 for a region, Print Screen for the whole screen. Mark them up with arrows, boxes, a pen, a highlighter, text and blur, and crop them.
 - Optional sounds, so you hear when a copy is saved.
-- One portable `KlipShot.exe`, no installer.
+- A setup, or one portable `KlipShot.exe` you unzip anywhere. Neither needs admin rights.
 
 ## Install
 
-1. Download `KlipShot-<version>-win-x64.zip` from [Releases](https://github.com/Argusi/KlipShot-releases/releases).
-2. Unzip it into any folder, for example `Documents\KlipShot`. The zip also has this README, the changelog and the licence.
-3. Run `KlipShot.exe`. It starts in the tray: look under the **^** by the clock. Drag the paperclip icon onto the taskbar to keep it in view.
+Each release on [Releases](https://github.com/Argusi/KlipShot-releases/releases) comes two ways. Both are the same KlipShot; pick one.
+
+**With the setup:** download `KlipShot-<version>-win-x64-setup.exe` and run it. It installs KlipShot just for you (no admin rights needed) into `%LocalAppData%\Programs\KlipShot`, adds it to the Start menu, and can put a shortcut on the desktop and start KlipShot when you sign in. Your clips are kept in that same folder. To remove KlipShot, use **Settings → Apps → Installed apps → KlipShot → Uninstall**; it asks whether to delete your clips too, and keeps them unless you say yes.
+
+**Portable:** download `KlipShot-<version>-win-x64.zip` and unzip it into any folder, for example `Documents\KlipShot`, or a USB stick. The zip also has this README, the changelog and the licence. Run `KlipShot.exe`. Your clips are kept in the same folder, so you can move or copy it anywhere.
+
+KlipShot starts in the tray: look under the **^** by the clock. Drag the paperclip icon onto the taskbar to keep it in view.
+
+KlipShot isn't code-signed, so the first time you run the setup or `KlipShot.exe`, Windows SmartScreen may say "Windows protected your PC". Click **More info**, then **Run anyway**.
+
+**Moving from the portable copy to the setup:** quit the portable KlipShot, then install. The first time the installed KlipShot starts, it offers to bring in your clips, folders, settings and backups; say yes and pick the portable copy's folder. You can also do it later with **Import from a portable copy...** in Tools → Settings → Starting up. The portable copy isn't changed, so delete its folder once you're happy. The clips that were in the installed copy before the import are kept as `KlipShot.before-import.db` next to `KlipShot.exe`, in case you need them.
 
 No .NET install is needed. To start KlipShot whenever you sign in, tick **Start KlipShot when I sign in to Windows** in **Tools → Settings** (or right-click the tray icon and tick **Start KlipShot when I sign in**). KlipShot starts hidden in the tray; tick **Show the window when KlipShot starts** in Settings to have the window open instead.
 
-To update, choose **Help → Check for updates** and say yes; KlipShot downloads the new version, checks it and restarts. Your clips are kept. You can also update by hand: quit KlipShot (right-click the tray icon → Quit KlipShot) and replace `KlipShot.exe` with the new one.
+To update, choose **Help → Check for updates** and say yes; KlipShot downloads the new version, checks it and restarts. Your clips are kept. You can also update by hand: run the new setup, or, for the portable copy, quit KlipShot (right-click the tray icon → Quit KlipShot) and replace `KlipShot.exe` with the new one.
 
 **Coming from Clippy:** quit Clippy (right-click its tray icon → Quit Clippy), put `KlipShot.exe` in the same folder and delete `Clippy.exe`. The first time KlipShot runs, it takes over your clips, folders and settings (renaming `Clippy.db` to `KlipShot.db`), and replaces Clippy's "start when I sign in" entry with its own.
 
@@ -170,19 +178,20 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 **Help → Check for updates** asks GitHub for the latest version. If there's a newer one, KlipShot asks whether to update now. Nothing is downloaded unless you say yes. Then KlipShot:
 
-1. Downloads the release zip (about 70 MB) from GitHub, showing its progress. You can cancel.
+1. Downloads the new version (about 70 MB) from GitHub, showing its progress. You can cancel. An installed KlipShot downloads the setup; a portable one downloads the zip.
 2. Checks it against the SHA-256 checksum GitHub publishes for the file, and refuses anything that doesn't match.
-3. Swaps `KlipShot.exe` for the new one and restarts. The old copy is kept as `KlipShot.old.exe` until the new one starts, then deleted.
+3. Installed: quits and runs the setup without any questions, which installs the new version and starts it. The new KlipShot then deletes the downloaded setup, so nothing is left behind.
+   Portable: swaps `KlipShot.exe` for the new one and restarts. The old copy is kept as `KlipShot.old.exe` until the new one starts, then deleted.
 
 Your clips and settings (`KlipShot.db`) aren't touched. If KlipShot's folder isn't writable (for example under `Program Files`), it offers to open the download page instead; then quit KlipShot and replace `KlipShot.exe` by hand.
 
-KlipShot isn't code-signed, so Windows SmartScreen or antivirus may now and then be wary of a freshly downloaded `KlipShot.exe`. That's the same whether KlipShot updates itself or you download it by hand.
+KlipShot isn't code-signed, so Windows SmartScreen or antivirus may now and then be wary of a freshly downloaded `KlipShot.exe` or setup. That's the same whether KlipShot updates itself or you download it by hand.
 
 To check automatically, turn on **Check for updates when KlipShot starts** in Tools → Settings. It is off unless you turn it on. KlipShot then checks at most once a day, a few seconds after it starts. It says nothing when you are up to date or offline. When there is a newer version, a notice appears by the clock, and clicking it asks whether to update.
 
 ## Where your clips are stored
 
-Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so you can move or back up the whole folder. KlipShot can also back it up for you (see [Backups](#backups)). If that folder isn't writable (for example under `Program Files`), KlipShot uses `%LocalAppData%\KlipShot` instead. Help → About shows the exact path.
+Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so everything is in one folder: `%LocalAppData%\Programs\KlipShot` if you used the setup, or wherever you unzipped the portable copy. KlipShot can also back it up for you (see [Backups](#backups)). If that folder isn't writable (for example under `Program Files`), KlipShot uses `%LocalAppData%\KlipShot` instead. Help → About shows the exact path.
 
 Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates (or at startup, if you turn that on), and then only to ask GitHub for the latest version number. It downloads an update only when you say yes.
 
