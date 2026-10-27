@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.2] - 2026-10-27
+
+### Changed
+- The theme picker is gone from **Tools → Settings**. Pick themes in **View → Theme**, which stays open while you try them.
+
 ## [0.9.1] - 2026-10-26
 
 ### Changed

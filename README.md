@@ -139,7 +139,7 @@ KlipShot beeps once when it saves a copy, and twice when you copy the same thing
 
 ### Themes and window
 
-**View → Theme** (also in Settings): Classic, Follow Windows (light or dark to match Windows), Fluent, Latte, Solarized Light, Midnight, Nord, Dracula, Gruvbox, Everforest or Rosé Pine.
+**View → Theme**: Classic, Follow Windows (light or dark to match Windows), Fluent, Latte, Solarized Light, Midnight, Nord, Dracula, Gruvbox, Everforest or Rosé Pine.
 
 ![KlipShot in eight of its themes: Midnight, Nord, Latte, Solarized Light, Dracula, Gruvbox, Everforest and Rosé Pine](docs/themes.png)
 
@@ -151,7 +151,7 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 ### Settings
 
-**Tools → Settings** has every option in one place, each with a line saying what it does: pasting, starting up, history size, screen clip keys, sounds, theme, always on top and button labels. Changes apply at once.
+**Tools → Settings** has every option in one place, each with a line saying what it does: pasting, starting up, history size, screen clip keys, sounds, always on top and button labels. Changes apply at once.
 
 ### Updates
 
