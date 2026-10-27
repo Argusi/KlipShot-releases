@@ -151,17 +151,19 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 ### Settings
 
-**Tools → Settings** has every option in one place, each with a line saying what it does: pasting, starting up, history size, screen clip keys, sounds, always on top and button labels. Changes apply at once.
+**Tools → Settings** has every option in one place, each with a line saying what it does: pasting, starting up, history size, screen clip keys, sounds, always on top, button labels and update checks. Changes apply at once.
 
 ### Updates
 
 **Help → Check for updates** asks GitHub for the latest version. If there's a newer one, KlipShot offers to open its download page. To update, quit KlipShot and replace `KlipShot.exe`; your clips are kept.
 
+To check automatically, turn on **Check for updates when KlipShot starts** in Tools → Settings. It is off unless you turn it on. KlipShot then checks at most once a day, a few seconds after it starts. It says nothing when you are up to date or offline. When there is a newer version, a notice appears by the clock, and clicking it opens the download page.
+
 ## Where your clips are stored
 
 Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so you can move or back up the whole folder. If that folder isn't writable (for example under `Program Files`), KlipShot uses `%LocalAppData%\KlipShot` instead. Help → About shows the exact path.
 
-Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates, and then only to ask GitHub for the latest version number.
+Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates (or at startup, if you turn that on), and then only to ask GitHub for the latest version number.
 
 See [CHANGELOG.md](CHANGELOG.md) for what's new.
 

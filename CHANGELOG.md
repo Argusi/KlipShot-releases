@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.3] - 2026-10-27
+
+### Added
+- **Check for updates when KlipShot starts** (Tools → Settings, off unless you turn it on). At most once a day, KlipShot quietly asks GitHub for the latest version, and a notice by the clock opens the download page if there is a newer one.
+
 ## [0.9.2] - 2026-10-27
 
 ### Changed
