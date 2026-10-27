@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.8] - 2026-10-27
+
+### Added
+- **Pick where backups go.** **Change folder...** under Backups in Tools → Settings sends backups to any folder you choose, such as another drive or a synced folder. **Use default folder** goes back to the `Backups` folder next to `KlipShot.db`. Backups already made stay where they are, and only the newest 10 in the chosen folder are kept.
+
+### Changed
+- **Settings fits on the screen.** Tools → Settings now lists its sections on the left (Pasting, Starting up, History, Backups, Screen clips, Sounds and look, Updates) and shows one at a time on the right, instead of one long page that could run off the bottom of the screen. While KlipShot runs, it opens on the section you last looked at.
+
 ## [0.9.7] - 2026-10-27
 
 ### Added

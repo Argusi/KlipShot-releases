@@ -144,9 +144,9 @@ KlipShot beeps once when it saves a copy, and twice when you copy the same thing
 
 ### Backups
 
-**Back up my clips automatically** in **Tools → Settings** saves a copy of all your clips, folders and settings every hour, every 6 hours, every day or every week while KlipShot runs. It is off unless you turn it on. **Back up now** makes a copy straight away, whether automatic backups are on or not, and **Open backups folder** shows where they are.
+**Back up my clips automatically** in **Tools → Settings** saves a copy of all your clips, folders and settings every hour, every 6 hours, every day or every week while KlipShot runs. It is off unless you turn it on. **Back up now** makes a copy straight away, whether automatic backups are on or not, and **Open backups folder** shows where they are. **Change folder...** sends backups to a folder you pick instead, such as another drive or a synced folder; **Use default folder** goes back.
 
-Backups go in a `Backups` folder next to `KlipShot.db`, named by date and time (for example `KlipShot-2026-10-27-120939.db`). The newest 10 are kept and older ones are deleted. KlipShot keeps working while it backs up. If an automatic backup fails, a notice appears by the clock.
+Backups go in a `Backups` folder next to `KlipShot.db` unless you pick another, named by date and time (for example `KlipShot-2026-10-27-120939.db`). The newest 10 are kept and older ones are deleted. KlipShot keeps working while it backs up. If an automatic backup fails (for example because the folder you picked is on a drive that isn't plugged in), a notice appears by the clock. Changing the folder doesn't move backups already made.
 
 To restore a backup: quit KlipShot (right-click its tray icon → Quit), delete `KlipShot.db-wal` and `KlipShot.db-shm` if they are there, copy the backup over `KlipShot.db` (keep the old file somewhere first if you might want it back), and start KlipShot.
 
@@ -164,7 +164,7 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 ### Settings
 
-**Tools → Settings** has every option in one place, each with a line saying what it does: pasting, starting up, history size, backups, screen clip keys, sounds, always on top, button labels and update checks. Changes apply at once.
+**Tools → Settings** has every option in one place, each with a line saying what it does. Pick a section on the left (Pasting, Starting up, History, Backups, Screen clips, Sounds and look, Updates) to see its options on the right. Changes apply at once, and while KlipShot runs, Settings opens on the section you last looked at.
 
 ### Updates
 
