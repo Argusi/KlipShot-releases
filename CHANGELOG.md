@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.6] - 2026-10-27
+
+### Fixed
+- **Screen clips no longer zoom in on scaled displays.** On a monitor set to 125% (or any scale other than 100%), pressing F9 could make the frozen screen jump larger. The clip overlay now sizes itself from the window it's actually drawn in rather than the scale Windows reports, and puts itself back over the screen if Windows resizes it for a scale change.
+
 ## [0.9.5] - 2026-10-27
 
 ### Changed
