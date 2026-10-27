@@ -42,6 +42,7 @@ The first time you open the window, a short welcome note explains this. Click **
 | --- | --- |
 | Enter or double-click | Paste the clip into the app you were using (**Paste** on the toolbar) |
 | Ctrl+C | Put the clip on the clipboard without pasting (**Copy** on the toolbar) |
+| F2 | Rename the clip in the list (its content stays as it is) |
 | Ctrl+P | Pin the clip to the top, or unpin it |
 | Ctrl+E | Mark up an image clip (**Edit image**) |
 | Del | Delete the clip (or all the selected clips) |
@@ -111,6 +112,10 @@ It stops by itself at the end of the list. To stop sooner, click **Stop PowerPas
 
 Select a text clip and type in the preview pane at the bottom. Once you change something, **Save changes** (Ctrl+S) and **Undo changes** appear: Save changes keeps the change, Undo changes goes back to the saved clip. Saving a formatted clip keeps only its text, and the preview header says so. Untick **Word wrap** to see long lines as they are.
 
+### Renaming clips
+
+Right-click a clip and choose **Rename...** (or select it and press F2, or use Edit → Rename) to give it a name that's easier to spot in the list. Only the list changes: the clip's text, image or files stay exactly as copied, and pasting it pastes the original. Search matches the new name as well as the clip's content. To go back to the clip's own text, rename it and leave the name empty.
+
 ### Pin to top
 
 Right-click a clip and choose **Pin to top** (or select it and use Edit → Pin to top, or Ctrl+P). Pinned clips show a pin and stay at the top of their folder or the InBox; new copies go just below them. Pinned clips are never removed by the history size limit. To unpin, right-click it and choose **Unpin**.
@@ -137,6 +142,14 @@ KlipShot beeps once when it saves a copy, and twice when you copy the same thing
 
 **Clips to keep in the InBox** in **Tools → Settings** sets how many clips the InBox keeps (25 to 1000, default 100). The oldest are removed first. Pinned clips and clips in folders are never removed.
 
+### Backups
+
+**Back up my clips automatically** in **Tools → Settings** saves a copy of all your clips, folders and settings every hour, every 6 hours, every day or every week while KlipShot runs. It is off unless you turn it on. **Back up now** makes a copy straight away, whether automatic backups are on or not, and **Open backups folder** shows where they are.
+
+Backups go in a `Backups` folder next to `KlipShot.db`, named by date and time (for example `KlipShot-2026-10-27-120939.db`). The newest 10 are kept and older ones are deleted. KlipShot keeps working while it backs up. If an automatic backup fails, a notice appears by the clock.
+
+To restore a backup: quit KlipShot (right-click its tray icon → Quit), delete `KlipShot.db-wal` and `KlipShot.db-shm` if they are there, copy the backup over `KlipShot.db` (keep the old file somewhere first if you might want it back), and start KlipShot.
+
 ### Themes and window
 
 **View → Theme**: Classic, Follow Windows (light or dark to match Windows), Fluent, Latte, Solarized Light, Midnight, Nord, Dracula, Gruvbox, Everforest or Rosé Pine.
@@ -151,7 +164,7 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 ### Settings
 
-**Tools → Settings** has every option in one place, each with a line saying what it does: pasting, starting up, history size, screen clip keys, sounds, always on top, button labels and update checks. Changes apply at once.
+**Tools → Settings** has every option in one place, each with a line saying what it does: pasting, starting up, history size, backups, screen clip keys, sounds, always on top, button labels and update checks. Changes apply at once.
 
 ### Updates
 
@@ -169,7 +182,7 @@ To check automatically, turn on **Check for updates when KlipShot starts** in To
 
 ## Where your clips are stored
 
-Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so you can move or back up the whole folder. If that folder isn't writable (for example under `Program Files`), KlipShot uses `%LocalAppData%\KlipShot` instead. Help → About shows the exact path.
+Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so you can move or back up the whole folder. KlipShot can also back it up for you (see [Backups](#backups)). If that folder isn't writable (for example under `Program Files`), KlipShot uses `%LocalAppData%\KlipShot` instead. Help → About shows the exact path.
 
 Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates (or at startup, if you turn that on), and then only to ask GitHub for the latest version number. It downloads an update only when you say yes.
 
@@ -177,4 +190,4 @@ See [CHANGELOG.md](CHANGELOG.md) for what's new.
 
 ## Licence
 
-KlipShot is © 2026 Bruce Maloney. All rights reserved. You may use it free of charge, but not copy, share or change it; see [LICENSE](LICENSE). KlipShot comes with no warranty.
+KlipShot is © 2026 Bruce Maloney. All rights reserved. You may use it free of charge, but not copy, share or change it; see [LICENSE](LICENSE). KlipShot comes with no warranty. Downloads and updates: [github.com/Argusi/KlipShot-releases](https://github.com/Argusi/KlipShot-releases).

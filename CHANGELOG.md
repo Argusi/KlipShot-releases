@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.9.7] - 2026-10-27
+
+### Added
+- **Rename clips in the list.** Right-click a clip and choose **Rename...** (or select it and press F2, or use Edit → Rename). The new name is only what the list shows: the clip's text, image or files stay exactly as copied, and pasting it pastes the original. Search finds clips by their new name too. Leave the name empty to show the clip's own text again.
+- **Automatic backups of your clips** (Tools → Settings, off unless you turn it on). Pick every hour, every 6 hours, every day or every week, and KlipShot saves a copy of its database, with all your clips, folders and settings, into a `Backups` folder next to `KlipShot.db` while it runs. The newest 10 copies are kept. **Back up now** makes one at any time, and **Open backups folder** shows them. The README explains how to restore one.
+
 ## [0.9.6] - 2026-10-27
 
 ### Fixed
