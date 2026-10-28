@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.15] - 2026-10-27
+
+### Fixed
+- **Scrolling clips work in Plex** and other web apps whose background stays put while the page scrolls over it. Plex shades its background a little darker towards the bottom of the window, so nothing lined up exactly and the clip stopped after the first screen. Scrolling clips also cope better with pages that rearrange themselves on the first scroll, such as a top bar that hides as soon as you scroll: KlipShot scrolls back and starts again instead of stopping.
+
 ## [0.9.14] - 2026-10-27
 
 ### Added
