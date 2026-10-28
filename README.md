@@ -53,6 +53,7 @@ The first time you open the window, a short welcome note explains this. Click **
 | F2 | Rename the clip in the list (its content stays as it is) |
 | Ctrl+P | Pin the clip to the top, or unpin it |
 | Ctrl+E | Mark up an image clip (**Edit image**) |
+| Ctrl+T | Copy the words in an image clip as text (**Copy text from image**) |
 | Del | Delete the clip (or all the selected clips) |
 | Ctrl+click, Shift+click | Select several clips, or a range of clips |
 | Ctrl+A | Select every clip in the list |
@@ -70,6 +71,10 @@ Clicking the tray icon opens or hides the window. Right-click it for Open KlipSh
 ### Screen clips
 
 Press **F9** anywhere to clip a region. The screen freezes and dims, so open menus and tooltips stay as they were; drag over the part you want (its sides snap to nearby edges, such as a pane's border; hold Alt to drag freely), or click to take the outlined window or pane under the mouse. This works in most apps, including ones that only draw their panes, such as games and video. Point at the title bar or edge of a window to take all of it (Esc or a right-click cancels). Press **Print Screen** to clip the whole screen (every monitor). Both are also in the tray icon's menu.
+
+**Delayed clip:** for a menu, tooltip or hover effect that only shows while you use the mouse, right-click the tray icon and choose **Clip a region in 5 seconds**. Then open what you want in the clip. A countdown shows at the bottom right of the screen, without taking the focus, so menus stay open. When it ends, the screen freezes as with F9. Give it a key and choose 3, 5 or 10 seconds under **Screen clips** in **Tools → Settings**. Pressing the key again during the countdown stops it.
+
+**Scrolling clip:** to clip more than fits on the screen, such as a long web page, document or chat, right-click the tray icon and choose **Clip a scrolling region**. Then drag over the part that scrolls, or click it to take that pane. KlipShot scrolls it down with the mouse wheel, a screenful at a time, and joins what comes into view into one tall clip, which opens in the editor. A header or toolbar that stays in place is kept once, even one that changes colour as the page moves (as YouTube's does). Menus and columns that stay put at the sides (YouTube's menu, Facebook's shortcuts and contacts, Craigslist's filters) and the page's scrollbar are left off, so the clip is just the part that scrolled. It waits for posts and videos that load as you scroll, so the clip gets them rather than grey placeholders. While it works, the mouse sits on the right edge of the region, over the scrollbar, so videos don't start playing under it; leave the mouse alone until the editor opens. It stops at the end of the page; press Esc, or the key again, to stop sooner. Give it a key under **Screen clips** in **Tools → Settings**. Very long pages stop at 30,000 pixels. A part of the page that's one colour all over and taller than the region (a big empty gap) looks like the end of the page, so the clip stops there. Pages that change a lot as they scroll (animations, videos playing in the page) can stop it too; the editor's title says why it stopped early.
 
 ![The markup editor with an arrow, a box, a highlight, a text label and a blurred API key on a screen clip](docs/markup.png)
 
@@ -96,13 +101,15 @@ You can take more clips while an editor is open; each one gets its own editor.
 
 **Edit image:** to mark up an image clip you already have (a screen clip, or any image you copied), select it and press **Ctrl+E**, or right-click it → **Edit image**. It opens in the same editor. Copy saves the result as a new clip, so the original stays as it was.
 
+**Copy text from image:** to get the words out of an image clip (a screenshot of an error, a scanned page, a slide), select it and press **Ctrl+T**, or right-click it → **Copy text from image**. KlipShot reads the text, puts it on the clipboard and saves it as a text clip; the image clip stays as it was. KlipShot also reads the text in every image clip by itself, a moment after it's copied, so **Search** finds image clips by the words in them. The reading is done by Windows, on your PC, in the languages set up in Windows. If Windows can't read any of them, KlipShot says how to add one (Windows Settings → Time & language → Language & region → your language's options → Optical character recognition). Handwriting and stylised lettering are often not read.
+
 To use different keys, pick them under **Screen clips** in **Tools → Settings** (F7, F8, F9, Ctrl+Shift+F9, Print Screen, Ctrl+Print Screen, or none). While KlipShot runs, other programs don't get these keys. If another program already has one, KlipShot tells you. If Print Screen doesn't work, turn off **Use the Print Screen key to open screen capture** in Windows Settings → Accessibility → Keyboard.
 
 ### Paste as text
 
 **Working with several clips:** Ctrl+click clips to select several, Shift+click to select a range, or Ctrl+A to select them all. Then press Del or right-click to delete, pin or move them all at once, or drag them onto a folder. KlipShot asks before deleting more than one clip. Paste and Copy use the clip you clicked last.
 
-**Search:** type in the **Search clips** box at the right of the toolbar (or press Ctrl+F) to show only the clips in the open folder that contain that text. It looks in the clip's text, title, file names and the app it came from. Press Down to move into the results, Enter to paste, and Esc (or ✕) to clear the search. Starting PowerPaste during a search pastes only the matching clips.
+**Search:** type in the **Search clips** box at the right of the toolbar (or press Ctrl+F) to show only the clips in the open folder that contain that text. It looks in the clip's text, title, file names, the app it came from and the words in its image. Press Down to move into the results, Enter to paste, and Esc (or ✕) to clear the search. Starting PowerPaste during a search pastes only the matching clips.
 
 **Paste as text** (on the toolbar, in the Edit menu, or by right-clicking a clip) pastes text with a change applied: Plain text, UPPERCASE, lowercase, Title Case, Remove extra spaces, Single line (join lines), Remove blank lines, or Clean up links (remove tracking). The saved clip stays as it was.
 
@@ -156,7 +163,7 @@ KlipShot beeps once when it saves a copy, and twice when you copy the same thing
 
 Backups go in a `Backups` folder next to `KlipShot.db` unless you pick another, named by date and time (for example `KlipShot-2026-10-27-120939.db`). The newest 10 are kept and older ones are deleted. KlipShot keeps working while it backs up. If an automatic backup fails (for example because the folder you picked is on a drive that isn't plugged in), a notice appears by the clock. Changing the folder doesn't move backups already made.
 
-To restore a backup: quit KlipShot (right-click its tray icon → Quit), delete `KlipShot.db-wal` and `KlipShot.db-shm` if they are there, copy the backup over `KlipShot.db` (keep the old file somewhere first if you might want it back), and start KlipShot.
+To restore a backup, click **Restore a backup...** and pick one. KlipShot asks first, then restarts with the clips, folders and settings from that backup. Your backup settings (how often, and which folder) stay as they are. What was there before is kept as `KlipShot.before-restore.db` next to `KlipShot.db`: to undo the restore, pick that file the same way (choose "All KlipShot databases" in the file picker to see it).
 
 ### Themes and window
 

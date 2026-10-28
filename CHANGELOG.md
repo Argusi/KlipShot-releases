@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.9.14] - 2026-10-27
+
+### Added
+- **Scrolling clips.** **Clip a scrolling region** in the tray icon's menu (and a key in Tools → Settings → Screen clips, none at first) lets you pick the part of a window that scrolls, then scrolls it down and joins it all into one tall clip: a whole web page, document or chat. Headers and toolbars that stay put are kept once. Side menus and columns that stay put (YouTube's menu, Facebook's shortcuts and contacts, Craigslist's filters) and the page's scrollbar are left off, so clicking a whole web page works as well as dragging inside the part that scrolls. It waits for posts and videos that load as you scroll, and keeps the mouse over the scrollbar so videos don't start playing under it. It stops at the end of the page, or when you press Esc or the key again. A tall clip opens in the editor at a readable size and scrolls there.
+- **Delayed screen clips.** **Clip a region in 5 seconds** in the tray icon's menu counts down in a corner of the screen, then freezes it as F9 does, so you have time to open a menu or bring up a tooltip first. The countdown doesn't take the focus, so menus stay open. In Tools → Settings → Screen clips you can give it a key (none at first) and choose 3, 5 or 10 seconds. Pressing the key again during the countdown stops it.
+- **Copy text from image.** Select an image clip and press Ctrl+T (or right-click it → Copy text from image) to copy the words in it. They're saved as a text clip too, and the image clip stays as it was. The text is read by Windows on your PC, in the languages set up in Windows.
+- **Search finds image clips by the words in them.** KlipShot reads the text in each image clip a moment after it's copied, and in the image clips you already have the first time this version starts.
+- **Restore a backup from Settings.** **Restore a backup...** under Backups in Tools → Settings lets you pick a backup, asks first, then restarts KlipShot with that backup's clips, folders and settings. Before, this meant quitting KlipShot and copying files by hand. Your backup settings stay as they are, and what was there before is kept as `KlipShot.before-restore.db`, so you can restore that to undo it.
+
 ## [0.9.13] - 2026-10-27
 
 ### Fixed
