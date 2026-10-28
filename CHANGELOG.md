@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.13] - 2026-10-27
+
+### Fixed
+- **Panes in Windows Terminal.** After F9, pointing inside Windows Terminal outlined the whole window, as if it were all title bar. Now its contents are outlined, and only the tab bar's empty space and buttons take the whole window. Other apps that draw their own title bar the same way benefit too.
+
+### Changed
+- **The pane outline keeps up with the mouse in slow apps.** After F9, KlipShot remembers what each app has told it about its layout while the picker is open, instead of asking again at every move. In Electron apps (LM Studio, Discord, VS Code…) and Word, where asking takes up to half a second, the outline now follows the mouse many times faster. The panes picked are the same. Finding panes in the picture is also much faster, most of all in apps full of photos or thumbnails (ON1 Photo RAW, model and photo libraries), where it took up to 0.4 seconds a move. And in every app, the outline now keeps moving with the mouse instead of waiting for it to stop (this was most noticeable in Excel).
+
 ## [0.9.12] - 2026-10-27
 
 ### Changed
