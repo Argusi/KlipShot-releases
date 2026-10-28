@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.17] - 2026-10-28
+
+### Added
+- **Keep the sound ready so no beep is missed.** A new setting in Tools → Settings → Sounds and look, off at first. Turn it on if copy beeps are sometimes missing, as can happen when KlipShot runs on a remote desktop or VDI: their sound often drops short beeps that come after a quiet spell. KlipShot then plays silence all the time, so each beep goes straight through. Windows sees sound playing, so the PC may not go to sleep by itself, and Bluetooth headphones stay connected and use battery.
+
 ## [0.9.16] - 2026-10-28
 
 ### Fixed
