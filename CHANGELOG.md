@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.16] - 2026-10-28
+
+### Fixed
+- **Copy beeps are easier to hear.** On some PCs the beep was sometimes silent, because the speakers or headphones were still waking up when it played and it was over before they did. KlipShot now gives them longer to wake up and makes the beeps a little longer, so they can be heard even if the start is cut off. The beep comes about a fifth of a second later than before.
+
 ## [0.9.15] - 2026-10-27
 
 ### Fixed
