@@ -34,6 +34,8 @@ Clicking the tray icon opens or hides the window. Right-click it for **Open Klip
 
 ## The clip list
 
+![The KlipShot window: folders on the left, the InBox's clips in the middle with a pinned reminder at the top, and a letter to a noisy neighbour in the preview pane below](docs/main-window.png)
+
 KlipShot keeps text (with its formatting), images and copied files. The **InBox** is where new copies land, unless you have one of your [folders](#folders) open; it's the only place KlipShot removes old clips when it gets full (see [History size](#history-size)). New copies go to the top of the list. The list shows each clip's text or a thumbnail, when it was copied, the app it came from and its size. The preview pane at the bottom shows the selected clip in full.
 
 - **Copying the same thing again** right after doesn't save it twice; you hear two beeps instead of one. Copying something that's already further down the list moves that clip back to the top, with the new time and app.
@@ -114,6 +116,8 @@ Press **F9** anywhere to clip a region. The screen freezes and dims, so open men
 - **Click** to take the outlined window or pane under the mouse. This works in most apps, including ones that only draw their panes, such as games and video. Point at the title bar or edge of a window to take all of it.
 - Esc or a right-click cancels.
 
+![F9 in action: the screen is frozen and dimmed, crosshairs follow the mouse, and the clip list under it is outlined in blue with its size, 977 × 510, ready to take with a click](docs/region-clip.png)
+
 Press **Print Screen** to clip the whole screen (every monitor). Both are also in the tray icon's menu. Each clip opens in the [markup editor](#the-markup-editor).
 
 **Delayed clip:** for a menu, tooltip or hover effect that only shows while you use the mouse, right-click the tray icon and choose **Clip a region in 5 seconds** (the number follows your setting). Then open what you want in the clip. A countdown shows at the bottom right of the screen, without taking the focus, so menus stay open. When it ends, the screen freezes as with F9. Choose 3, 5 or 10 seconds in Tools → Settings → Screen clips, and give it a key under [Keys](#keys). Pressing the key again during the countdown stops it.
@@ -130,7 +134,7 @@ If Print Screen doesn't work, turn off **Use the Print Screen key to open screen
 
 ## The markup editor
 
-![The markup editor with an arrow, a box, a highlight, a text label and a blurred API key on a screen clip](docs/markup.png)
+![The markup editor on a clip of an office fridge dashboard: a box around "days since last incident: 0", a highlight and label on a possibly sentient Tupperware, an arrow urging "Do it! Do it now!" at the button to throw out Gary's 2019 yogurt, and the fridge's API key blurred](docs/markup.png)
 
 A screen clip opens in an editor, over the spot it came from (a tall scrolling clip opens at a readable size and scrolls).
 
