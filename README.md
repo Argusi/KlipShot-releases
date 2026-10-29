@@ -6,201 +6,38 @@ KlipShot used to be called Clippy.
 
 ![KlipShot window showing the InBox, its folders and a letter to a noisy neighbour in the preview pane](docs/screenshot.png)
 
-- Keeps text (with its formatting), images and copied files.
-- Paste any clip back with Enter or a double-click, or paste text with a change such as UPPERCASE or Single line.
+- Keeps text (with its formatting), images and copied files, and finds any of them with search.
+- Paste any clip back with Enter or a double-click, or paste text with a change such as Plain text, UPPERCASE or Single line.
+- Quick paste: press Ctrl+Alt+V while typing anywhere to pick a clip from a small list at the text cursor.
 - PowerPaste: paste a run of clips one after another with Ctrl+V.
-- Pin clips to the top of the list, and file clips into folders. Lock a folder to keep it as it is.
-- Screen clips: F9 for a region, Print Screen for the whole screen. Mark them up with arrows, boxes, a pen, a highlighter, text and blur, and crop them.
-- Optional sounds, so you hear when a copy is saved.
-- A setup, or one portable `KlipShot.exe` you unzip anywhere. Neither needs admin rights.
+- Rename clips, pin them to the top, and file them into folders. Lock a folder to keep it as it is.
+- Screen clips: F9 for a region, Print Screen for the whole screen, a delayed clip for menus and tooltips, and a scrolling clip for whole web pages. Mark them up with arrows, boxes, a pen, a highlighter, text and blur, and crop them.
+- Copy the words out of any image clip; search finds images by the text in them.
+- Automatic backups, ten themes (or follow Windows light and dark), optional sounds, and updates from inside the app.
+- A setup, or one portable `KlipShot.exe` you unzip anywhere. Neither needs admin rights, and everything stays on your PC.
 
 ## Install
 
 Each release on [Releases](https://github.com/Argusi/KlipShot-releases/releases) comes two ways. Both are the same KlipShot; pick one.
 
-**With the setup:** download `KlipShot-<version>-win-x64-setup.exe` and run it. It installs KlipShot just for you (no admin rights needed) into `%LocalAppData%\Programs\KlipShot`, adds it to the Start menu, and can put a shortcut on the desktop and start KlipShot when you sign in. Your clips are kept in that same folder. To remove KlipShot, use **Settings → Apps → Installed apps → KlipShot → Uninstall**; it asks whether to delete your clips too, and keeps them unless you say yes.
+- **Setup:** download `KlipShot-<version>-win-x64-setup.exe` and run it. It installs KlipShot just for you into `%LocalAppData%\Programs\KlipShot` and adds it to the Start menu.
+- **Portable:** download `KlipShot-<version>-win-x64.zip`, unzip it into any folder (or a USB stick) and run `KlipShot.exe`. Your clips are kept in that folder.
 
-**Portable:** download `KlipShot-<version>-win-x64.zip` and unzip it into any folder, for example `Documents\KlipShot`, or a USB stick. The zip also has this README, the changelog and the licence. Run `KlipShot.exe`. Your clips are kept in the same folder, so you can move or copy it anywhere.
+KlipShot isn't code-signed, so the first time you run it, Windows SmartScreen may say "Windows protected your PC". Click **More info**, then **Run anyway**. No .NET install is needed.
 
 KlipShot starts in the tray: look under the **^** by the clock. Drag the paperclip icon onto the taskbar to keep it in view.
 
-KlipShot isn't code-signed, so the first time you run the setup or `KlipShot.exe`, Windows SmartScreen may say "Windows protected your PC". Click **More info**, then **Run anyway**.
-
-**Moving from the portable copy to the setup:** quit the portable KlipShot, then install. The first time the installed KlipShot starts, it offers to bring in your clips, folders, settings and backups; say yes and pick the portable copy's folder. You can also do it later with **Import from a portable copy...** in Tools → Settings → Starting up. The portable copy isn't changed, so delete its folder once you're happy. The clips that were in the installed copy before the import are kept as `KlipShot.before-import.db` next to `KlipShot.exe`, in case you need them.
-
-No .NET install is needed. To start KlipShot whenever you sign in, tick **Start KlipShot when I sign in to Windows** in **Tools → Settings** (or right-click the tray icon and tick **Start KlipShot when I sign in**). KlipShot starts hidden in the tray; tick **Show the window when KlipShot starts** in Settings to have the window open instead.
-
-To update, choose **Help → Check for updates** and say yes; KlipShot downloads the new version, checks it and restarts. Your clips are kept. You can also update by hand: run the new setup, or, for the portable copy, quit KlipShot (right-click the tray icon → Quit KlipShot) and replace `KlipShot.exe` with the new one.
-
-**Coming from Clippy:** quit Clippy (right-click its tray icon → Quit Clippy), put `KlipShot.exe` in the same folder and delete `Clippy.exe`. The first time KlipShot runs, it takes over your clips, folders and settings (renaming `Clippy.db` to `KlipShot.db`), and replaces Clippy's "start when I sign in" entry with its own.
-
-## Quick start
+## Using KlipShot
 
 1. Copy something as usual (Ctrl+C in any app). KlipShot saves it.
 2. Click the tray icon to open KlipShot.
-3. Select a clip and press **Enter** (or click **Paste** on the toolbar). KlipShot hides and pastes it into the app you were using.
+3. Select a clip and press **Enter**. KlipShot hides and pastes it into the app you were using.
 
-The first time you open the window, a short welcome note explains this. Click **Got it** to hide it.
+Or, while typing anywhere, press **Ctrl+Alt+V** to pick a clip without opening the window, and press **F9** to clip part of the screen.
 
-## Using KlipShot
+![Quick paste in Notepad: Ctrl+Alt+V opens the list at the text cursor, typing "order" narrows it, and Enter pastes the tracking link](docs/quickpaste.gif)
 
-### Keys
-
-| Key | What it does |
-| --- | --- |
-| Enter or double-click | Paste the clip into the app you were using (**Paste** on the toolbar) |
-| Ctrl+C | Put the clip on the clipboard without pasting (**Copy** on the toolbar) |
-| F2 | Rename the clip in the list (its content stays as it is) |
-| Ctrl+P | Pin the clip to the top, or unpin it |
-| Ctrl+E | Mark up an image clip (**Edit image**) |
-| Ctrl+T | Copy the words in an image clip as text (**Copy text from image**) |
-| Del | Delete the clip (or all the selected clips) |
-| Ctrl+click, Shift+click | Select several clips, or a range of clips |
-| Ctrl+A | Select every clip in the list |
-| Ctrl+S | Save changes to a text clip |
-| Esc | Close the window (KlipShot keeps running in the tray) |
-
-Right-click a clip for the same actions, plus **Move to folder**. **Help → Keyboard shortcuts** lists the keys.
-
-**Pasting several clips:** in **Tools → Settings**, tick **Keep the window open after pasting** and KlipShot comes back in front after each paste, so you can double-click one clip after another. Or tick **Double-click only copies** to have a double-click only put the clip on the clipboard (Enter still pastes); then press Ctrl+V in your app yourself.
-
-The clip that's on the clipboard right now has a clipboard icon next to its title, and the status bar and the tray icon's tooltip name it.
-
-Clicking the tray icon opens or hides the window. Right-click it for Open KlipShot, Stop PowerPaste, Clip a region, Clip the whole screen, Start KlipShot when I sign in and Quit KlipShot.
-
-### Screen clips
-
-Press **F9** anywhere to clip a region. The screen freezes and dims, so open menus and tooltips stay as they were; drag over the part you want (its sides snap to nearby edges, such as a pane's border; hold Alt to drag freely), or click to take the outlined window or pane under the mouse. This works in most apps, including ones that only draw their panes, such as games and video. Point at the title bar or edge of a window to take all of it (Esc or a right-click cancels). Press **Print Screen** to clip the whole screen (every monitor). Both are also in the tray icon's menu.
-
-**Delayed clip:** for a menu, tooltip or hover effect that only shows while you use the mouse, right-click the tray icon and choose **Clip a region in 5 seconds**. Then open what you want in the clip. A countdown shows at the bottom right of the screen, without taking the focus, so menus stay open. When it ends, the screen freezes as with F9. Give it a key and choose 3, 5 or 10 seconds under **Screen clips** in **Tools → Settings**. Pressing the key again during the countdown stops it.
-
-**Scrolling clip:** to clip more than fits on the screen, such as a long web page, document or chat, right-click the tray icon and choose **Clip a scrolling region**. Then drag over the part that scrolls, or click it to take that pane. KlipShot scrolls it down with the mouse wheel, a screenful at a time, and joins what comes into view into one tall clip, which opens in the editor. A header or toolbar that stays in place is kept once, even one that changes colour as the page moves (as YouTube's does). Menus and columns that stay put at the sides (YouTube's menu, Facebook's shortcuts and contacts, Craigslist's filters) and the page's scrollbar are left off, so the clip is just the part that scrolled. It waits for posts and videos that load as you scroll, so the clip gets them rather than grey placeholders, and it copes with pages that scroll over a background that stays put (Plex). While it works, the mouse sits on the right edge of the region, over the scrollbar, so videos don't start playing under it; leave the mouse alone until the editor opens. It stops at the end of the page; press Esc, or the key again, to stop sooner. Give it a key under **Screen clips** in **Tools → Settings**. Very long pages stop at 30,000 pixels. A part of the page that's one colour all over and taller than the region (a big empty gap) looks like the end of the page, so the clip stops there. Pages that change a lot as they scroll (animations, videos playing in the page) can stop it too; the editor's title says why it stopped early.
-
-![The markup editor with an arrow, a box, a highlight, a text label and a blurred API key on a screen clip](docs/markup.png)
-
-The clip opens in an editor, over the spot it came from:
-
-| Tool | Key | What it does |
-| --- | --- | --- |
-| Select | V | Click a mark to move it; Del removes it |
-| Arrow | A | Drag from the tail to the point |
-| Rectangle | R | An outlined box |
-| Pen | P | Draw freehand |
-| Highlighter | H | A see-through box over text |
-| Text | T | Click, type, then Enter (Shift+Enter for a new line, Esc to cancel) |
-| Blur | B | Pixelates passwords, emails and other private details. The real pixels are replaced, so they can't be recovered |
-| Crop | C | Drag over the part to keep |
-
-Pick a colour and a line width on the toolbar (the width also sets the text size). KlipShot remembers the tool, colour and width you used last. Ctrl+Z undoes and Ctrl+Y redoes, including moves and crops.
-
-- **Copy** (Enter or Ctrl+C) puts the marked-up clip on the clipboard and closes the editor. KlipShot saves it as an image clip like any other copy.
-- **Save** (Ctrl+S) saves it as a PNG file. The editor stays open.
-- **Esc** or ✕ closes without copying. If you've drawn anything you haven't saved, KlipShot asks first.
-
-You can take more clips while an editor is open; each one gets its own editor.
-
-**Edit image:** to mark up an image clip you already have (a screen clip, or any image you copied), select it and press **Ctrl+E**, or right-click it → **Edit image**. It opens in the same editor. Copy saves the result as a new clip, so the original stays as it was.
-
-**Copy text from image:** to get the words out of an image clip (a screenshot of an error, a scanned page, a slide), select it and press **Ctrl+T**, or right-click it → **Copy text from image**. KlipShot reads the text, puts it on the clipboard and saves it as a text clip; the image clip stays as it was. KlipShot also reads the text in every image clip by itself, a moment after it's copied, so **Search** finds image clips by the words in them. The reading is done by Windows, on your PC, in the languages set up in Windows. If Windows can't read any of them, KlipShot says how to add one (Windows Settings → Time & language → Language & region → your language's options → Optical character recognition). Handwriting and stylised lettering are often not read.
-
-To use different keys, pick them under **Screen clips** in **Tools → Settings** (F7, F8, F9, Ctrl+Shift+F9, Print Screen, Ctrl+Print Screen, or none). While KlipShot runs, other programs don't get these keys. If another program already has one, KlipShot tells you. If Print Screen doesn't work, turn off **Use the Print Screen key to open screen capture** in Windows Settings → Accessibility → Keyboard.
-
-### Paste as text
-
-**Working with several clips:** Ctrl+click clips to select several, Shift+click to select a range, or Ctrl+A to select them all. Then press Del or right-click to delete, pin or move them all at once, or drag them onto a folder. KlipShot asks before deleting more than one clip. Paste and Copy use the clip you clicked last.
-
-**Search:** type in the **Search clips** box at the right of the toolbar (or press Ctrl+F) to show only the clips in the open folder that contain that text. It looks in the clip's text, title, file names, the app it came from and the words in its image. Press Down to move into the results, Enter to paste, and Esc (or ✕) to clear the search. Starting PowerPaste during a search pastes only the matching clips.
-
-**Paste as text** (on the toolbar, in the Edit menu, or by right-clicking a clip) pastes text with a change applied: Plain text, UPPERCASE, lowercase, Title Case, Remove extra spaces, Single line (join lines), Remove blank lines, or Clean up links (remove tracking). The saved clip stays as it was.
-
-### PowerPaste
-
-For pasting several clips in a row, for example into a form:
-
-1. Select the first clip.
-2. Click **PowerPaste** on the toolbar (or open the PowerPaste menu) and choose **Start here, then older clips** (down the list) or **Start here, then newer clips** (up the list).
-3. Go to the other app. Each Ctrl+V pastes the next clip.
-
-It stops by itself at the end of the list. To stop sooner, click **Stop PowerPaste**, which shows on the toolbar while PowerPaste is on (it is also in the tray menu). The first time you start PowerPaste, KlipShot explains how it works.
-
-### Editing clips
-
-Select a text clip and type in the preview pane at the bottom. Once you change something, **Save changes** (Ctrl+S) and **Undo changes** appear: Save changes keeps the change, Undo changes goes back to the saved clip. Saving a formatted clip keeps only its text, and the preview header says so. Untick **Word wrap** to see long lines as they are.
-
-### Renaming clips
-
-Right-click a clip and choose **Rename...** (or select it and press F2, or use Edit → Rename) to give it a name that's easier to spot in the list. Only the list changes: the clip's text, image or files stay exactly as copied, and pasting it pastes the original. Search matches the new name as well as the clip's content. To go back to the clip's own text, rename it and leave the name empty.
-
-### Pin to top
-
-Right-click a clip and choose **Pin to top** (or select it and use Edit → Pin to top, or Ctrl+P). Pinned clips show a pin and stay at the top of their folder or the InBox; new copies go just below them. Pinned clips are never removed by the history size limit. To unpin, right-click it and choose **Unpin**.
-
-### Folders
-
-- Click **New folder** under the folder list (or File → New folder, or right-click **Folders**) to create a folder. Right-click a folder to rename, lock or delete it. Deleting a folder moves its clips to the InBox.
-- New copies go into the folder you have open. The window title shows which one that is, for example **KlipShot – InBox** or **KlipShot – Work**.
-- To move a clip, drag it onto a folder, or right-click it and choose **Move to folder** (also in the Edit menu).
-- A **locked** folder (🔒) never receives new copies. Those go to the InBox, which turns bold so you can see where they went. A note above the clip list reminds you when the open folder is locked.
-- **Go back to the InBox after pasting** (in Tools → Settings) switches back to the InBox after you paste, so your next copy lands there.
-
-### Drag and drop
-
-- Drag a clip onto another clip to reorder.
-- Drag a clip onto a folder or the InBox to move it there. This works on locked folders too.
-- Drag a folder onto another folder to reorder, or onto **Folders** to move it to the bottom.
-
-### Sounds
-
-KlipShot beeps once when it saves a copy, and twice when you copy the same thing again right after (that repeat isn't saved). Turn them off with **Play a sound when a copy is saved** in **Tools → Settings**. If beeps are sometimes missing, as can happen on a remote desktop or VDI, turn on **Keep the sound ready so no beep is missed** there. KlipShot then plays silence all the time, so Windows sees sound playing: the PC may not go to sleep by itself, and Bluetooth headphones stay connected and use battery.
-
-### History size
-
-**Clips to keep in the InBox** in **Tools → Settings** sets how many clips the InBox keeps (25 to 1000, default 100). The oldest are removed first. Pinned clips and clips in folders are never removed.
-
-### Backups
-
-**Back up my clips automatically** in **Tools → Settings** saves a copy of all your clips, folders and settings every hour, every 6 hours, every day or every week while KlipShot runs. It is off unless you turn it on. **Back up now** makes a copy straight away, whether automatic backups are on or not, and **Open backups folder** shows where they are. **Change folder...** sends backups to a folder you pick instead, such as another drive or a synced folder; **Use default folder** goes back.
-
-Backups go in a `Backups` folder next to `KlipShot.db` unless you pick another, named by date and time (for example `KlipShot-2026-10-27-120939.db`). The newest 10 are kept and older ones are deleted. KlipShot keeps working while it backs up. If an automatic backup fails (for example because the folder you picked is on a drive that isn't plugged in), a notice appears by the clock. Changing the folder doesn't move backups already made.
-
-To restore a backup, click **Restore a backup...** and pick one. KlipShot asks first, then restarts with the clips, folders and settings from that backup. Your backup settings (how often, and which folder) stay as they are. What was there before is kept as `KlipShot.before-restore.db` next to `KlipShot.db`: to undo the restore, pick that file the same way (choose "All KlipShot databases" in the file picker to see it).
-
-### Themes and window
-
-**View → Theme**: Classic, Follow Windows (light or dark to match Windows), Fluent, Latte, Solarized Light, Midnight, Nord, Dracula, Gruvbox, Everforest or Rosé Pine.
-
-![KlipShot in eight of its themes: Midnight, Nord, Latte, Solarized Light, Dracula, Gruvbox, Everforest and Rosé Pine](docs/themes.png)
-
-**View → Button labels** (also in Settings) shows the names next to the toolbar icons. Untick it for a smaller toolbar with just icons; point at a button to see what it does.
-
-**View → Always on top** (also in Settings) keeps the KlipShot window above other windows while it's open.
-
-KlipShot remembers the window's size and position, how you've dragged the borders between the panes, and the width of each column in the clip list.
-
-### Settings
-
-**Tools → Settings** has every option in one place, each with a line saying what it does. Pick a section on the left (Pasting, Starting up, History, Backups, Screen clips, Sounds and look, Updates) to see its options on the right. Changes apply at once, and while KlipShot runs, Settings opens on the section you last looked at.
-
-### Updates
-
-**Help → Check for updates** asks GitHub for the latest version. If there's a newer one, KlipShot asks whether to update now. Nothing is downloaded unless you say yes. Then KlipShot:
-
-1. Downloads the new version (about 70 MB) from GitHub, showing its progress. You can cancel. An installed KlipShot downloads the setup; a portable one downloads the zip.
-2. Checks it against the SHA-256 checksum GitHub publishes for the file, and refuses anything that doesn't match.
-3. Installed: quits and runs the setup without any questions, which installs the new version and starts it. The new KlipShot then deletes the downloaded setup, so nothing is left behind.
-   Portable: swaps `KlipShot.exe` for the new one and restarts. The old copy is kept as `KlipShot.old.exe` until the new one starts, then deleted.
-
-Your clips and settings (`KlipShot.db`) aren't touched. If KlipShot's folder isn't writable (for example under `Program Files`), it offers to open the download page instead; then quit KlipShot and replace `KlipShot.exe` by hand.
-
-KlipShot isn't code-signed, so Windows SmartScreen or antivirus may now and then be wary of a freshly downloaded `KlipShot.exe` or setup. That's the same whether KlipShot updates itself or you download it by hand.
-
-To check automatically, turn on **Check for updates when KlipShot starts** in Tools → Settings. It is off unless you turn it on. KlipShot then checks at most once a day, a few seconds after it starts. It says nothing when you are up to date or offline. When there is a newer version, a notice appears by the clock, and clicking it asks whether to update.
-
-## Where your clips are stored
-
-Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so everything is in one folder: `%LocalAppData%\Programs\KlipShot` if you used the setup, or wherever you unzipped the portable copy. KlipShot can also back it up for you (see [Backups](#backups)). If that folder isn't writable (for example under `Program Files`), KlipShot uses `%LocalAppData%\KlipShot` instead. Help → About shows the exact path.
-
-Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates (or at startup, if you turn that on), and then only to ask GitHub for the latest version number. It downloads an update only when you say yes.
+**The [KlipShot guide](GUIDE.md) explains everything else:** pasting, quick paste, PowerPaste, folders, screen clips and the markup editor, keys, settings, backups, updates, and moving from the portable copy to the setup. In KlipShot, **Help → How to use KlipShot** opens it.
 
 See [CHANGELOG.md](CHANGELOG.md) for what's new.
 

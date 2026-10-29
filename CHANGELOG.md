@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [0.9.18] - 2026-10-29
+
+### Added
+- **Quick paste.** Press **Ctrl+Alt+V** while you're typing in any app, and a small list of your InBox clips opens right at the text cursor, so you don't have to switch to the KlipShot window. Type to search, use the arrow keys or the mouse wheel to pick a clip and press Enter to paste it. Right-click a clip to paste it as plain text or with another Paste as text change. Esc or clicking away closes it. In apps that draw their own text cursor, such as many browsers, the list opens at the mouse instead. Ctrl+Alt+V is Paste Special in Word and Excel; pick a different key (or none) in Tools → Settings → Keys.
+- **One page for all of KlipShot's keys.** Tools → Settings → Keys lists quick paste and the four screen clip keys, each with a picker and whether it's working. If another program has one of them, it says so; close that program and click **Try again**. When KlipShot starts, one notice now names every key that's in use elsewhere.
+
+### Changed
+- **The README is short now, and the full instructions moved to a new [KlipShot guide](GUIDE.md)**, arranged by task. Help → How to use KlipShot opens the guide. It also covers things the README had missed, such as all four screen clips in the tray menu and the keys that work in any app.
+- **The screen clip keys moved** from Tools → Settings → Screen clips to the new Keys page. How long a delayed clip waits is still under Screen clips.
+- **The "From app" name is right for Store apps.** Clips copied from apps such as Calculator or Settings were saved as coming from "Application Frame Host", the Windows process that holds those apps' windows; they now show the app's own name. Apps whose name was their file name, such as the new Notepad ("Notepad.exe"), now show just "Notepad".
+- **KlipShot now marks your clips' database with a version number**, so later versions can upgrade it safely. If you go back to an older KlipShot after using a newer one, it warns you that some newer things may be missing, and it won't restore a backup made by a newer version. When a future version changes the database, KlipShot first saves a copy of it as it was (KlipShot.before-v2.db and so on, next to KlipShot.db; only the latest is kept), and the change is all or nothing, so a failed upgrade leaves your clips as they were.
+- **Copying something again moves its clip to the top** instead of saving it a second time. The clip gets the new copy's time and app. This works in the InBox and in the folder that's open; a clip in another folder stays where it is, and a new one is saved.
+- **When the InBox is full, the clips at the bottom of the list go first.** Before, the clips that were copied longest ago went first, even if you had dragged them up the list or moved them back from a folder. Pinned clips and clips in folders are still kept for good.
+
 ## [0.9.17] - 2026-10-28
 
 ### Added
