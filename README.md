@@ -10,7 +10,7 @@ KlipShot used to be called Clippy.
 - Paste any clip back with Enter or a double-click, or paste text with a change such as Plain text, UPPERCASE or Single line.
 - Quick paste: press Ctrl+Alt+V while typing anywhere to pick a clip from a small list at the text cursor.
 - PowerPaste: paste a run of clips one after another with Ctrl+V.
-- Rename clips, pin them to the top, and file them into folders. Lock a folder to keep it as it is.
+- Rename clips, pin them to the top, and file them into folders, which can hold folders of their own. Lock a folder to keep it as it is.
 - Screen clips: F9 for a region, Print Screen for the whole screen, a delayed clip for menus and tooltips, and a scrolling clip for whole web pages. Mark them up with arrows, boxes, a pen, a highlighter, text and blur, and crop them.
 - Copy the words out of any image clip; search finds images by the text in them.
 - Automatic backups, ten themes (or follow Windows light and dark), optional sounds, and updates from inside the app.

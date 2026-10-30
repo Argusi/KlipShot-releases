@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.9.20] - 2026-10-29
+
+### Added
+- **Folders inside folders.** Right-click a folder and choose **New folder inside**, or drag a folder onto another one. Click the arrow beside a folder to show or hide what's inside; KlipShot remembers which ones are open. Move to folder lists them indented under their parent. Deleting a folder moves the folders inside it up a level. The InBox still can't hold folders. (An older KlipShot shows them all at the top level.)
+- **You can see where a drag will drop.** A line shows where a clip will land between two others, or where a folder will go; a box shows the folder it will go into. The clip or folder you're dragging fades, and its name follows the mouse. The list scrolls when you hold a clip near its top or bottom.
+
+### Changed
+- **Dropping a clip on the bottom half of a row now puts it below that clip**, and the top half above it, as the line shows. Before, it always took that clip's place.
+
 ## [0.9.19] - 2026-10-29
 
 ### Changed

@@ -96,7 +96,8 @@ Right-click a clip and choose **Pin to top** (or press Ctrl+P, or use Edit → P
 
 ### Folders
 
-- Click **New folder** under the folder list (or File → New folder, or right-click **Folders**) to create one. Right-click a folder to rename, lock or delete it. Deleting a folder moves its clips to the InBox.
+- Click **New folder** under the folder list (or File → New folder, or right-click **Folders**) to create one. Right-click a folder to rename, lock or delete it. Deleting a folder moves its clips to the InBox, and the folders inside it move up a level.
+- **Folders inside folders:** right-click a folder and choose **New folder inside**, or drag a folder onto another one. Click the arrow beside a folder to show or hide the folders inside it; KlipShot remembers which are open. The InBox can't hold folders.
 - New copies go into the folder you have open. The window title shows which one that is, for example **KlipShot – InBox** or **KlipShot – Work**.
 - To move a clip, drag it onto a folder, or right-click it and choose **Move to folder** (also in the Edit menu).
 - A **locked** folder (🔒) never receives new copies. Those go to the InBox, which turns bold so you can see where they went. A note above the clip list reminds you when the open folder is locked.
@@ -104,9 +105,11 @@ Right-click a clip and choose **Pin to top** (or press Ctrl+P, or use Edit → P
 
 ### Drag and drop
 
-- Drag a clip onto another clip to reorder. (Clear the search first.)
+While you drag, the clip or folder you're moving fades and its name follows the mouse. A line shows where it will go, or a box around the folder it will go into.
+
+- Drag a clip up or down the list to reorder. Drop it on the top half of a row to put it above that clip, or the bottom half to put it below. (Clear the search first.) Hold it near the top or bottom of the list to scroll.
 - Drag a clip onto a folder or the InBox to move it there. This works on locked folders too.
-- Drag a folder onto another folder to reorder, or onto **Folders** to move it to the bottom.
+- Drag a folder near the top or bottom edge of another folder to put it above or below that one, or onto the middle of it to put it inside. Drop it on **Folders** to move it to the bottom of the top level.
 
 ## Screen clips
 
