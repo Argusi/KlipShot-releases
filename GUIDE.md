@@ -46,7 +46,7 @@ KlipShot keeps text (with its formatting), images and copied files. The **InBox*
 
 ### Editing clips
 
-Select a text clip and type in the preview pane. Once you change something, **Save changes** (Ctrl+S) and **Undo changes** appear: Save changes keeps the change, Undo changes goes back to the saved clip. Saving a formatted clip keeps only its text, and the preview header says so. Untick **Word wrap** to see long lines as they are.
+Select a text clip and type in the preview pane. Once you change something, **Save changes** (Ctrl+S) and **Undo changes** appear: Undo changes goes back to the clip as it was. **Save changes makes a new clip** just above the original and selects it; the original stays as it was. If you keep editing the new clip and save again, it's updated rather than copied again. Clicking another clip, pasting or closing the window also saves your change this way. The new clip is plain text, so saving a formatted clip doesn't touch its formatting, but the new one has none. Ctrl+Z undoes your typing, back to the clip as it was shown. Untick **Word wrap** to see long lines as they are.
 
 ### History size
 
@@ -157,7 +157,7 @@ Pick a colour and a line width on the toolbar (the width also sets the text size
 
 You can take more clips while an editor is open; each one gets its own editor.
 
-**Edit image:** to mark up an image clip you already have (a screen clip, or any image you copied), select it and press **Ctrl+E**, or right-click it → **Edit image**. Copy saves the result as a new clip, so the original stays as it was.
+**Edit image:** to mark up an image clip you already have (a screen clip, or any image you copied), select it and press **Ctrl+E**, or right-click it → **Edit image**. Copy saves the result as a new clip just above the original, selects it and puts it on the clipboard. The original stays as it was.
 
 ## Text in images
 
@@ -183,7 +183,7 @@ In the KlipShot window:
 | Ctrl+click, Shift+click | Select several clips, or a range of clips |
 | Ctrl+A | Select every clip in the list |
 | Ctrl+F | Search the clips in the open folder |
-| Ctrl+S | Save changes to a text clip |
+| Ctrl+S | Save an edited text clip (as a new clip) |
 | Esc | Clear the search, or close the window (KlipShot keeps running in the tray) |
 
 In any app, while KlipShot runs:

@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [0.9.19] - 2026-10-29
+
+### Changed
+- **Saving an edited text clip makes a new clip and keeps the original.** The new clip goes just above the original, in the same folder (pinned too, if the original is), and is selected, so the list doesn't jump. Saving again while you're still on the new clip updates it instead of making another. A formatted original keeps its formatting; the new clip is plain text.
+- **Edited images go just above the original too.** Copy in the markup editor, after Edit image, used to save the result at the top of the list as if copied from KlipShot. It now goes just above the original, keeps the original's app, is selected, and is on the clipboard ready to paste. New screen clips still go to the top.
+
+### Fixed
+- **Ctrl+Z while editing a clip's text stops at the clip as it was.** Pressing it again used to bring back the text of the clip you looked at before. That text was then saved over the clip you were editing as soon as you clicked away.
+- **Copies aren't lost when another app keeps the clipboard busy.** Some apps, such as Excel, Remote Desktop and some password managers, hold the clipboard for a moment after you copy. KlipShot could then show a "KlipShot error" message, or quietly not save the copy. It now waits and tries again a few times. If the clipboard is still locked after that, a notice says the copy wasn't saved, instead of an error message.
+- **Pasting or copying a clip from KlipShot no longer saves it again as a new copy.** With a big picture, or a busy clipboard, the clip could jump to the top of the list with the other app's name and play the copy sound. And a copy you made right after pasting from KlipShot is now always saved; before, a copy within less than half a second could be missed.
+- **Copying a big picture no longer makes KlipShot stutter.** Turning it into PNG and making its thumbnail now happen in the background.
+
 ## [0.9.18] - 2026-10-29
 
 ### Added
