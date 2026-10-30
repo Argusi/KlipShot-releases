@@ -42,7 +42,7 @@ KlipShot keeps text (with its formatting), images and copied files. The **InBox*
 - **On the clipboard:** the clip that's on the clipboard right now has a clipboard icon next to its title, and the status bar and the tray icon's tooltip name it.
 - **Search:** type in the **Search clips** box at the right of the toolbar (or press Ctrl+F) to show only the clips in the open folder that contain that text. It looks in the clip's text, its name and title, file names, the app it came from and the words in its image. Press Down to move into the results, Enter to paste, and Esc (or ✕) to clear the search.
 - **Several clips:** Ctrl+click clips to select several, Shift+click to select a range, or Ctrl+A to select them all. Then press Del or right-click to delete, pin or move them all at once, or drag them onto a folder. KlipShot asks before deleting more than one clip. Paste and Copy use the clip you clicked last.
-- **Right-click** a clip for Paste, Copy, Paste as text, Edit image, Copy text from image, Rename, Pin to top, Move to folder and Delete.
+- **Right-click** a clip for Paste, Copy, Paste as text, Edit image, Copy text from image, Rename, Pin to top, Move to (the top or bottom of the list, or a folder) and Delete.
 
 ### Editing clips
 
@@ -94,12 +94,14 @@ Right-click a clip and choose **Rename...** (or press F2, or use Edit → Rename
 
 Right-click a clip and choose **Pin to top** (or press Ctrl+P, or use Edit → Pin to top). Pinned clips show a pin and stay at the top of their folder or the InBox; new copies go just below them. Pinned clips are never removed by the history size limit. To unpin, right-click it and choose **Unpin**.
 
+To move a clip without pinning it, right-click it and choose **Move to → Top** (Alt+Home) or **Move to → Bottom** (Alt+End), also in the Edit menu. Top puts it just below any pinned clips; a pinned clip moves to the top or bottom of the pinned ones. With several clips selected, they all move and keep their order. In a full InBox, clips at the bottom are the first to be removed (see [History size](#history-size)).
+
 ### Folders
 
 - Click **New folder** under the folder list (or File → New folder, or right-click **Folders**) to create one. Right-click a folder to rename, lock or delete it. Deleting a folder moves its clips to the InBox, and the folders inside it move up a level.
 - **Folders inside folders:** right-click a folder and choose **New folder inside**, or drag a folder onto another one. Click the arrow beside a folder to show or hide the folders inside it; KlipShot remembers which are open. The InBox can't hold folders.
 - New copies go into the folder you have open. The window title shows which one that is, for example **KlipShot – InBox** or **KlipShot – Work**.
-- To move a clip, drag it onto a folder, or right-click it and choose **Move to folder** (also in the Edit menu).
+- To move a clip, drag it onto a folder, or right-click it and choose **Move to** and the folder (also in the Edit menu).
 - A **locked** folder (🔒) never receives new copies. Those go to the InBox, which turns bold so you can see where they went. A note above the clip list reminds you when the open folder is locked.
 - **Go back to the InBox after pasting** (Tools → Settings → Pasting) switches back to the InBox after you paste from a folder, so your next copy lands there.
 

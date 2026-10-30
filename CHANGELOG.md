@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.21] - 2026-10-29
+
+### Added
+- **Move to top or bottom.** Right-click a clip and choose **Move to → Top** or **Bottom** (also in the Edit menu, or press Alt+Home or Alt+End) to send it to the top of the list, just below any pinned clips, or to the bottom. Works on several clips at once and keeps their order. Pinned clips move within the pinned ones.
+
+### Changed
+- **Move to folder is now Move to**, with Top and Bottom at the start of it, then your folders.
+
 ## [0.9.20] - 2026-10-29
 
 ### Added
