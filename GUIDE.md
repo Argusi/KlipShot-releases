@@ -198,33 +198,71 @@ Recipes work with Enter, a double-click and quick paste, but not PowerPaste, and
 
 ## Smart actions
 
-When a clip has web links, email addresses, US street addresses, phone numbers, dates, file paths or tracking numbers in it, or an image clip has a QR code, a **Show links** button appears above the preview, with how many it found. Nothing pops up, and the clip still pastes exactly as copied.
+When a clip has web links, email addresses, US street addresses, phone numbers, dates, file paths or tracking numbers in it, or an image clip has a QR code, a **Show links** button appears above the preview, with how many it found. It also finds anything you've set up in [your own rules](#your-own-rules). Nothing pops up, the clip still pastes exactly as copied, and clips are checked on your PC, so nothing leaves it until you click a link.
 
-Click **Show links** and they become clickable: web links open in your browser, email addresses in your mail app, street addresses in Google Maps, and phone numbers open in your calling app, such as Phone Link, if you have one. Dates open a new Google Calendar event to check and save, file and folder paths show in File Explorer, and tracking numbers open the carrier's tracking page. **Hide links**, or picking another clip, goes back to the usual view. Right-click one to open it or **Copy to a new clip**, which saves just that link or address as its own clip and puts it on the clipboard. You can't edit a clip's text while its links are showing.
+Click **Show links** to make them clickable:
+
+| What was found | What clicking does |
+|---|---|
+| Web link | Opens in your browser |
+| Email address | Opens in your mail app |
+| Street address | Opens in Google Maps |
+| Phone number | Opens in your calling app, such as Phone Link, if you have one |
+| Date | Opens a new Google Calendar event to check and save |
+| File or folder path | Shows it in File Explorer |
+| Tracking number | Opens the carrier's tracking page |
+
+Right-click a link to open it, or choose **Copy to a new clip** to save just that link or address as its own clip and put it on the clipboard.
+
+**Hide links**, or picking another clip, goes back to the usual view. You can't edit a clip's text while its links are showing.
+
+In [quick paste](#quick-paste), right-click a clip to see its links and addresses, up to ten, each with Open and Copy to a new clip.
+
+To turn them off, all or by type, go to Tools → Settings → Smart actions.
+
+### Links in images
 
 This works on image clips too, using the words KlipShot reads in the picture: each link is marked on the image, right where it is. Text read from a picture can have mistakes, so point at a mark to see what will open before you click it. Links shown only as words, such as "Click here", can't be found, because the address isn't in the picture.
 
 A QR code is marked on the picture too. Point at it to see what it holds before you open it, as a code can lead anywhere. If it holds a link, phone number or email address, clicking opens it. If it holds Wi-Fi details, clicking connects to that network. Windows saves it but won't join it by itself later, and if you already have a saved network with that name, KlipShot asks before replacing it. If it holds anything else, clicking copies it to a new clip. For Wi-Fi details, KlipShot shows only the network's name, but **Copy to a new clip** includes the password.
 
-Paths can start with a drive, a network share such as `\\server\share`, or a variable such as `%AppData%`. A path on your PC is only picked up if it exists, and a line number after it, as in `C:\app\main.cs(12,5)`, is left out. Paths on network, USB and disc drives aren't checked, as they can be slow to answer, and they need quotes if they have spaces. Clicking a file selects it in File Explorer and never runs it.
+### What gets picked up
 
-Dates can be written like `Nov 4`, `Tue Nov 4 at 2pm`, `4 November 2026`, `11/4/2026`, `2026-11-04`, `next Tuesday` or `tomorrow at 3pm`, and can have a time range such as `2-3:30pm`, before or after the date. `Nov 4-6` adds an all-day event over those days. Written with slashes, they're month first and need the year. "Today", "tomorrow", "tonight" and a plain weekday need a time, and these count from when you copied the clip, so an old clip's "tomorrow" is the day after that copy. A date with no year is this year, or next year if it's over a month ago. "Next Tuesday" means the first Tuesday after the day you copied it. Dates in the past or that repeat, such as "last Friday", "every Monday", "Monday last week" or a year in the 1900s, aren't picked up, and neither is a date in a file name. A lowercase `2 may` needs a year or a time, and a short weekday with only a time needs a capital, as in `Sat at 3pm`, so "he sat at 3pm" is left alone. A clip with more than 20 dates is taken for a log or list, so none of them are shown. A time zone in capitals after the time, such as `2pm EST`, `2pm PT` or `14:00 UTC`, is kept on the event. With no end time, an event lasts an hour, and with no time at all, it lasts all day. The event is named after the line the date is on, which goes to Google only when you click. Point at a date to see how it was read.
+**Paths** can start with a drive, a network share such as `\\server\share`, or a variable such as `%AppData%`. A path on your PC is only picked up if it exists, and a line number after it, as in `C:\app\main.cs(12,5)`, is left out. Paths on network, USB and disc drives aren't checked, as they can be slow to answer, and they need quotes if they have spaces. Clicking a file selects it in File Explorer and never runs it.
 
-UPS and USPS tracking numbers are checked with their check digits. FedEx numbers are plain digits, so they need "FedEx" just before them.
+**Dates** can be written like `Nov 4`, `Tue Nov 4 at 2pm`, `4 November 2026`, `11/4/2026`, `2026-11-04`, `next Tuesday` or `tomorrow at 3pm`, and can have a time range such as `2-3:30pm`, before or after the date. Point at a date to see how it was read.
 
-Phone numbers need an area code and separators, such as `(904) 555-1234`, `904-555-1234` or `+1 904 555 1234`, or a + and a country code. Ten digits in a row aren't picked up, as those are as often order numbers.
+How dates are read:
 
-In [quick paste](#quick-paste), right-click a clip to see its links and addresses, up to ten, each with Open and Copy to a new clip.
+- Written with slashes, they're month first and need the year.
+- A date with no year is this year, or next year if it's over a month ago.
+- "Today", "tomorrow", "tonight" and a plain weekday need a time. These count from when you copied the clip, so an old clip's "tomorrow" is the day after that copy.
+- "Next Tuesday" means the first Tuesday after the day you copied it.
+- A lowercase `2 may` needs a year or a time, and a short weekday with only a time needs a capital, as in `Sat at 3pm`, so "he sat at 3pm" is left alone.
 
-Addresses are US style and can be in the middle of other text. Capitals don't matter and a ZIP isn't needed. An address needs a house number, and either a street type such as St, Ave or Road, or a city and state after the street:
+What's left out:
+
+- Dates in the past or that repeat, such as "last Friday", "every Monday", "Monday last week" or a year in the 1900s.
+- A date in a file name.
+- All the dates in a clip with more than 20 of them, as that's taken for a log or list.
+
+The calendar event:
+
+- With no end time, it lasts an hour. With no time at all, it lasts all day. `Nov 4-6` adds an all-day event over those days.
+- A time zone in capitals after the time, such as `2pm EST`, `2pm PT` or `14:00 UTC`, is kept on the event.
+- It's named after the line the date is on, which goes to Google only when you click.
+
+**Tracking numbers** from UPS and USPS are checked with their check digits. FedEx numbers are plain digits, so they need "FedEx" just before them.
+
+**Phone numbers** need an area code and separators, such as `(904) 555-1234`, `904-555-1234` or `+1 904 555 1234`, or a + and a country code. Ten digits in a row aren't picked up, as those are as often order numbers.
+
+**Addresses** are US style and can be in the middle of other text. Capitals don't matter and a ZIP isn't needed. An address needs a house number, and either a street type such as St, Ave or Road, or a city and state after the street:
 
 - `123 main st`
 - `545 cathy trip ln, jacksonville, florida`
 - `1 apple park, cupertino, ca`
 
 PO boxes aren't picked up. KlipShot leans towards finding more, so now and then it may underline something that isn't an address, or start from the wrong word. That's harmless: the clip isn't changed, and the underline shows exactly what was found.
-
-To turn them off, all or by type, go to Tools → Settings → Smart actions.
 
 ### Your own rules
 
@@ -235,9 +273,46 @@ In Tools → Settings → Smart rules, you can add your own patterns. A rule has
 | Ticket | `[A-Z]{2,5}-\d+` | `https://acme.atlassian.net/browse/$0` |
 | Invoice | `Invoice (\d+)` | `https://billing.example.com/inv/$1` |
 
-Enter some text in **Try it on** to see what a rule would open, then click **Save**. Rules work in text and image clips and in quick paste, and are included in backups.
+Enter some text in **Try it on** to see what a rule would open, then click **Save**. Rules work in text and image clips and in quick paste, and are included in backups. To turn them all off, clear **Use my rules** on the same page.
 
 Addresses must start with `http://`, `https://` or `mailto:`, so a rule can't start a program, and what's matched is escaped before it goes in the address. Built-in types go first, so a rule can't take text they've already found, and earlier rules beat later ones. A rule that takes too long on a clip gives up, keeping what it found so far, and each rule finds at most 1,000 matches in a clip.
+
+### Rules to try
+
+You can copy any of these into Tools → Settings → Smart rules. Try each one on some of your own text first. Capitals count unless a rule starts with `(?i)`. KlipShot already finds UPS, USPS and FedEx tracking numbers, so they don't need a rule.
+
+Orders:
+
+| Name | Find | Open |
+|---|---|---|
+| Amazon order | `\b\d{3}-\d{7}-\d{7}\b` | `https://www.amazon.com/gp/your-account/order-details?orderID=$0` |
+| Amazon product | `\bB0[0-9A-Z]{8}\b` | `https://www.amazon.com/dp/$0` |
+
+Travel and cars:
+
+| Name | Find | Open |
+|---|---|---|
+| Flight status | `\b(UA\|DL\|AA\|WN)\s?(\d{1,4})\b` | `https://www.google.com/search?q=$1+$2+flight+status` |
+| Recalls by VIN | `(?i)\bVIN:? ?([A-HJ-NPR-Z0-9]{17})\b` | `https://www.google.com/search?q=$1+recall` |
+| Car details by VIN | `\b[A-HJ-NPR-Z0-9]{17}\b` | `https://www.google.com/search?q=VIN+$0` |
+
+Money and shopping:
+
+| Name | Find | Open |
+|---|---|---|
+| Stock ticker | `\$([A-Z]{1,5})\b` | `https://finance.yahoo.com/quote/$1` |
+| Dollars to euros | `\$\d[\d,]*(\.\d\d)?` | `https://www.google.com/search?q=$0+in+euros` |
+| Book by ISBN | `\b97[89](-?\d){10}\b` | `https://openlibrary.org/isbn/$0` |
+
+Home, work and health:
+
+| Name | Find | Open |
+|---|---|---|
+| Medication lookup | `(?i)\bRx:? ?([a-z]+)\b` | `https://vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta?v%3Aproject=medlineplus&query=$1` |
+| Email about a case | `Case #(\d+)` | `mailto:office@example.com?subject=Case%20$1` |
+| Bible verse | `\b((?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?) (\d+):(\d+)\b` | `https://www.biblegateway.com/passage/?search=$1+$2:$3` |
+
+For the flight rule, use your own airlines' codes, separated by `|`. For the email rule, use a real address. The VIN and Bible verse rules can underline text they weren't meant for, such as any 17-character code or `Room 4:30`. If you use both VIN rules, add Recalls by VIN first, as earlier rules win: a VIN with the label then goes to recalls, and one without it to car details.
 
 ## Keys
 

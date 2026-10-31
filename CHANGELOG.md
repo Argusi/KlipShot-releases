@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.28] - 2026-10-31
+
+### Changed
+- **The Smart actions guide is easier to read.** It has a table of what each link does and clearer sections, and it splits up the long part on dates.
+
+### Added
+- **Smart rules to try.** The guide now has ready-made rules for everyday things like Amazon orders, flights, VINs and ISBNs.
+
 ## [0.9.27] - 2026-10-31
 
 ### Fixed
