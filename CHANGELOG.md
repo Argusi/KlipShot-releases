@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.9.22] - 2026-10-30
+
+### Added
+- **Recipes.** Put blanks in a text clip, such as `Hi {{name}}, your order {{clipboard}} ships {{date+3}}`. When you paste it, a small window asks for the blanks, and `{{clipboard}}`, `{{date}}`, `{{date+3}}` and `{{time}}` fill themselves in, in the format you pick in Tools → Settings → Pasting. The clip itself isn't changed.
+- **Show links.** When a clip has web links, email addresses, US street addresses or phone numbers in it, a **Show links** button appears above the preview. Click it and they become clickable: links open in your browser, email addresses in your mail app, street addresses in Google Maps and phone numbers in your calling app. It works on image clips too, with each one marked on the picture, and QR codes in images are read as well. Right-click one to copy just that link or address to a new clip. In quick paste, right-click a clip to see them. Nothing pops up, and clips still paste exactly as copied. Turn it off, all or by type, in Tools → Settings → Smart actions.
+
 ## [0.9.21] - 2026-10-29
 
 ### Added

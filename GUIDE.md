@@ -13,6 +13,8 @@ This guide describes the latest KlipShot. If something here is missing in yours,
 - [Screen clips](#screen-clips)
 - [The markup editor](#the-markup-editor)
 - [Text in images](#text-in-images)
+- [Recipes](#recipes)
+- [Smart actions](#smart-actions)
 - [Keys](#keys)
 - [Settings](#settings)
 - [Backups](#backups)
@@ -172,6 +174,49 @@ KlipShot also reads the text in every image clip by itself, a moment after it's 
 
 The reading is done by Windows, on your PC, in the languages set up in Windows. If Windows can't read any of them, KlipShot says how to add one (Windows Settings → Time & language → Language & region → your language's options → Optical character recognition). Handwriting and stylised lettering are often not read.
 
+## Recipes
+
+A recipe is a text clip with blanks in double braces. Type one into any app and copy it, or edit a clip in the preview:
+
+`Hi {{name}}, your order {{clipboard}} ships {{date+3}}.`
+
+When you paste it, a small window asks for each blank once, however often it appears. Press Enter to paste, or **Paste as it is** to leave the blanks in. These fill themselves in:
+
+| Blank | Becomes |
+|---|---|
+| `{{clipboard}}` | The text on the clipboard |
+| `{{date}}` | Today's date |
+| `{{date+3}}`, `{{date-1}}` | That many days from today or before it |
+| `{{time}}` | The time now |
+
+To choose how dates and times are written, such as `2026-10-30` or `8:06 PM`, go to Tools → Settings → Pasting. At first they follow your Windows settings. If you copy templates or code that use double braces, turn off **Fill in recipes when pasting** there, or press **Paste as it is** when asked.
+
+Recipes work with Enter, a double-click and quick paste, but not PowerPaste, and they paste as plain text. Copy to clipboard (Ctrl+C) copies the clip with its blanks. File recipes in a folder or pin them to keep them.
+
+## Smart actions
+
+When a clip has web links, email addresses, US street addresses or phone numbers in it, or an image clip has a QR code, a **Show links** button appears above the preview, with how many it found. Nothing pops up, and the clip still pastes exactly as copied.
+
+Click **Show links** and they become clickable: web links open in your browser, email addresses in your mail app, street addresses in Google Maps, and phone numbers open in your calling app, such as Phone Link, if you have one. **Hide links**, or picking another clip, goes back to the usual view. Right-click one to open it or **Copy to a new clip**, which saves just that link or address as its own clip and puts it on the clipboard. You can't edit a clip's text while its links are showing.
+
+This works on image clips too, using the words KlipShot reads in the picture: each link is marked on the image, right where it is. Text read from a picture can have mistakes, so point at a mark to see what will open before you click it. Links shown only as words, such as "Click here", can't be found, because the address isn't in the picture.
+
+A QR code is marked on the picture too. Point at it to see what it holds before you open it, as a code can lead anywhere. If it holds a link, phone number or email address, clicking opens it. If it holds anything else, clicking copies it to a new clip. For Wi-Fi details, KlipShot shows only the network's name, but the copy includes the password.
+
+Phone numbers need an area code and separators, such as `(904) 555-1234`, `904-555-1234` or `+1 904 555 1234`, or a + and a country code. Ten digits in a row aren't picked up, as those are as often order numbers.
+
+In [quick paste](#quick-paste), right-click a clip to see its links and addresses, up to ten, each with Open and Copy to a new clip.
+
+Addresses are US style and can be in the middle of other text. Capitals don't matter and a ZIP isn't needed. An address needs a house number, and either a street type such as St, Ave or Road, or a city and state after the street:
+
+- `123 main st`
+- `545 cathy trip ln, jacksonville, florida`
+- `1 apple park, cupertino, ca`
+
+PO boxes aren't picked up. KlipShot leans towards finding more, so now and then it may underline something that isn't an address, or start from the wrong word. That's harmless: the clip isn't changed, and the underline shows exactly what was found.
+
+To turn them off, all or by type, go to Tools → Settings → Smart actions.
+
 ## Keys
 
 In the KlipShot window:
@@ -217,7 +262,8 @@ In any app, while KlipShot runs:
 
 | Section | What's there |
 | --- | --- |
-| Pasting | Keep the window open after pasting, Double-click only copies, Go back to the InBox after pasting; quick paste is explained here |
+| Pasting | Keep the window open after pasting, Double-click only copies, Go back to the InBox after pasting, [recipes](#recipes) on or off and how they write dates and times; quick paste is explained here |
+| Smart actions | [Turn Show links off](#smart-actions), all or by type |
 | Keys | Every KlipShot key, whether it works, and [Try again](#keys) |
 | Starting up | Start KlipShot when I sign in to Windows, Show the window when KlipShot starts, Import from a portable copy |
 | History | [Clips to keep in the InBox](#history-size) |
