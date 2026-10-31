@@ -52,7 +52,7 @@ Select a text clip and type in the preview pane. Once you change something, **Sa
 
 ### History size
 
-**Clips to keep in the InBox** (Tools → Settings → History) sets how many clips the InBox keeps: 25 to 1000, 100 at first. When it's full, the clips at the bottom of the list are removed first. Pinned clips and clips in folders are never removed.
+**Clips to keep in the InBox** (Tools → Settings → History) sets how many clips the InBox keeps: 25 to 1000, 100 at first. When it's full, the clips at the bottom of the list are removed first. Pinned clips and clips in folders are never removed. A copy over 50 MB isn't saved; it stays on the clipboard, and a notice says so.
 
 ## Pasting
 
@@ -100,7 +100,7 @@ To move a clip without pinning it, right-click it and choose **Move to → Top**
 
 ### Folders
 
-- Click **New folder** under the folder list (or File → New folder, or right-click **Folders**) to create one. Right-click a folder to rename, lock or delete it. Deleting a folder moves its clips to the InBox, and the folders inside it move up a level.
+- Click **New folder** under the folder list (or File → New folder, or right-click **Folders**) to create one. Right-click a folder to rename, lock or delete it. Deleting a folder moves its clips to the top of the InBox, and the folders inside it move up a level. If that takes the InBox over its limit, KlipShot says how many of the oldest clips will go before you agree.
 - **Folders inside folders:** right-click a folder and choose **New folder inside**, or drag a folder onto another one. Click the arrow beside a folder to show or hide the folders inside it; KlipShot remembers which are open. The InBox can't hold folders.
 - New copies go into the folder you have open. The window title shows which one that is, for example **KlipShot – InBox** or **KlipShot – Work**.
 - To move a clip, drag it onto a folder, or right-click it and choose **Move to** and the folder (also in the Edit menu).
@@ -266,7 +266,7 @@ In any app, while KlipShot runs:
 | Smart actions | [Turn Show links off](#smart-actions), all or by type |
 | Keys | Every KlipShot key, whether it works, and [Try again](#keys) |
 | Starting up | Start KlipShot when I sign in to Windows, Show the window when KlipShot starts, Import from a portable copy |
-| History | [Clips to keep in the InBox](#history-size) |
+| History | [Clips to keep in the InBox](#history-size), [private copies](#where-your-clips-are-stored) |
 | Backups | [Automatic backups, Back up now and Restore](#backups) |
 | Screen clips | How long a delayed clip waits |
 | Sounds and look | [Sounds](#sounds), always on top, button labels |
@@ -327,7 +327,9 @@ Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so everythi
 
 When an update changes how `KlipShot.db` is laid out, KlipShot first saves a copy of it as it was, such as `KlipShot.before-v2.db`, in the same folder, and tells you. Only the latest copy is kept. To go back to it, use **Restore a backup...** in Tools → Settings → Backups. If the update can't finish, your clips are left as they were. If you go back to an older KlipShot after using a newer one, it warns that some newer things may be missing.
 
-**Passwords and other private things you copy are saved too**, like everything else, and `KlipShot.db` and its backups aren't encrypted. Anyone who can open your Windows account's files can read them. To remove something, select the clip and press Del; it's then gone from KlipShot, though older backups still have it until they're replaced.
+**Private copies:** password managers usually mark what they copy so clipboard tools leave it out, and KlipShot does. To save those copies too, untick **Don't save copies that apps mark as private** in Tools → Settings → History.
+
+**Other private things you copy are saved**, like everything else, including a password copied from anywhere that doesn't mark it. `KlipShot.db` and its backups aren't encrypted, so anyone who can open your Windows account's files can read them. To remove something, select the clip and press Del; it's then gone from KlipShot, though older backups still have it until they're replaced.
 
 Everything stays on your PC. KlipShot only connects to the internet when you choose Help → Check for updates (or at startup, if you turn that on), and then only to ask GitHub for the latest version number. It downloads an update only when you say yes.
 
@@ -336,7 +338,8 @@ Everything stays on your PC. KlipShot only connects to the internet when you cho
 - **A key does nothing.** Open Tools → Settings → [Keys](#changing-keys). If it says another program has the key, pick a different one, or close that program and click Try again.
 - **Print Screen opens the Windows snipping tool instead.** Turn off **Use the Print Screen key to open screen capture** in Windows Settings → Accessibility → Keyboard, then click Try again on the Keys page.
 - **Quick paste opens at the mouse, not where I'm typing.** Some apps, including many browsers, draw their own text cursor and don't tell Windows where it is. The list then opens at the mouse; it still pastes where you were typing.
-- **A paste lands in the wrong window, or nowhere.** KlipShot pastes into the last window you used before it. Click into the place you want to paste, then open KlipShot (or use [quick paste](#quick-paste), which never leaves the app you're in). Apps running as administrator don't accept pastes sent by KlipShot unless KlipShot runs as administrator too.
+- **A paste lands in the wrong window, or nowhere.** KlipShot pastes into the last window you used before it. Click into the place you want to paste, then open KlipShot (or use [quick paste](#quick-paste), which never leaves the app you're in). Apps running as administrator don't accept pastes sent by KlipShot unless KlipShot runs as administrator too. If Windows won't switch back to your app, a notice says so and the clip is on the clipboard: press Ctrl+V there.
+- **KlipShot says it couldn't start.** If its database is damaged, say Yes to restore a backup. The damaged file is kept as `KlipShot.before-restore.db`.
 - **Copy beeps are sometimes missing**, often on a remote desktop or VDI. Turn on **Keep the sound ready so no beep is missed** in Tools → Settings → Sounds and look.
 - **Copy text from image finds nothing.** Windows reads the text in the languages set up in Windows; add the language's optical character recognition (see [Text in images](#text-in-images)). Handwriting and stylised lettering are often not read.
 - **Windows says "Windows protected your PC".** KlipShot isn't code-signed. Click **More info**, then **Run anyway**.

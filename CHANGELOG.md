@@ -2,6 +2,34 @@
 
 ## [Unreleased]
 
+## [0.9.23] - 2026-10-30
+
+### Added
+- **Copies that apps mark as private aren't saved.** Password managers usually mark what they copy so clipboard tools leave it out, and KlipShot now does. To save those copies too, untick **Don't save copies that apps mark as private** in Tools → Settings → History. They'd then be kept unencrypted like every other clip.
+
+### Changed
+- **KlipShot starts faster and uses less memory.** `KlipShot.exe` is no longer compressed, so it takes more disk space (about 200 MB), but the setup download is smaller.
+- **A copy over 50 MB isn't saved.** It stays on the clipboard to paste, and a notice says why. Everything about a clip that size is slow, and it would stay in the database.
+- **KlipShot does less while it's hidden.** A copied image is only decoded and checked for QR codes when you open the window, and clips only keep their picture in memory while they're on screen.
+- **Faster with many clips or folders.** Typing in the search box and most copies no longer rebuild the folder list, and deleting or moving many clips at once is much quicker.
+- **KlipShot keeps pointing "start when I sign in" at the copy that set it.** Running another copy, such as a portable one, used to take the entry over. It's now only updated if the exe it points to has gone.
+
+### Fixed
+- **Deleting a folder no longer loses its clips.** They went to the bottom of the InBox, where the next copies trimmed them away. They now go to the top, the InBox list shows them straight away, and if that takes the InBox over its limit, the question says how many of the oldest clips will go.
+- **Copying the same text again with different formatting keeps the new formatting.** The newest copy's formatting replaces the old, so what you paste matches what you copied last.
+- **A damaged database no longer leaves KlipShot running with no window or tray icon.** Starting it again only said it was already running. It now says what's wrong, offers to restore a backup, and quits.
+- **Restoring a backup or importing a portable copy can't trip over the old copy still closing.** The clips KlipShot had are kept with any changes not yet written into the main file.
+- **Quitting, updating, restoring or importing asks first about unsaved screen clip markup.** Before, No still threw the clip away when quitting. During an update, a question left unanswered could leave KlipShot closed and not updated.
+- **Ctrl+V is no longer sent to the wrong window.** If Windows won't switch back to your app, the clip stays on the clipboard and a notice says so. KlipShot also waits a moment for Shift, Ctrl or Alt to be let go before pasting.
+- **A folder that's just been deleted can't reopen.** A click still being handled could open it, and new copies then went where they couldn't be seen.
+- **The uninstaller's "delete my clips" leaves nothing behind.** The copies KlipShot keeps before a restore, an import or a database upgrade are deleted too.
+- **An edited image is no longer lost if its folder is deleted while the editor is open.** It's saved in the InBox instead.
+- **Changing the InBox size no longer overstates how many clips will go.** Pinned clips were counted, but they're never removed.
+- **Clean up links removes HubSpot tracking too**, such as `_hsenc` and `_hsmi`.
+- **Folder paths with a `;` in them work** for backups, restoring and importing.
+- **The screen clip editor shows the tool you picked in the Classic theme**, which could keep the colour of the theme before it.
+- **The check for a repeated copy works when the clocks go back** or when you change time zone.
+
 ## [0.9.22] - 2026-10-30
 
 ### Added
