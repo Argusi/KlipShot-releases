@@ -81,8 +81,10 @@ Pinned clips show a pin. Ctrl+Alt+V is Paste Special in Word and Excel, so those
 For pasting several clips in a row, for example into a form:
 
 1. Select the first clip.
-2. Click **PowerPaste** on the toolbar (or open the PowerPaste menu) and choose **Start here, then older clips** (down the list) or **Start here, then newer clips** (up the list).
+2. Click **PowerPaste** on the toolbar (or open the PowerPaste menu) and choose **Start here, then down the list** or **Start here, then up the list**.
 3. Go to the other app. Each Ctrl+V pastes the next clip.
+
+You can also start from [quick paste](#quick-paste): right-click a clip and choose **Start PowerPaste here, then down the list** or **up the list**. If you've typed a search, it pastes only the matching clips. KlipShot's window stays closed.
 
 It stops by itself at the end of the list. To stop sooner, click **Stop PowerPaste**, which shows on the toolbar while PowerPaste is on (it is also in the tray menu). Starting PowerPaste during a search pastes only the matching clips. The first time you start PowerPaste, KlipShot explains how it works.
 

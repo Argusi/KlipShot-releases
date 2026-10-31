@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.24] - 2026-10-30
+
+### Added
+- **Start PowerPaste from quick paste.** Right-click a clip in the list and choose to go down or up from it, without opening KlipShot's window. If you've typed a search, it pastes only the matching clips.
+
+### Changed
+- **PowerPaste's choices now say down or up the list**, not older or newer clips, because clips can be rearranged.
+
 ## [0.9.23] - 2026-10-30
 
 ### Added
