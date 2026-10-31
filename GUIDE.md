@@ -297,7 +297,7 @@ In any app, while KlipShot runs:
 
 ### Sounds
 
-KlipShot beeps once when it saves a copy, and twice when you copy the same thing again right after (that repeat isn't saved). Turn them off with **Play a sound when a copy is saved**. If beeps are sometimes missing, as can happen on a remote desktop or VDI, turn on **Keep the sound ready so no beep is missed**. KlipShot then plays silence all the time, so Windows sees sound playing: the PC may not go to sleep by itself, and Bluetooth headphones stay connected and use battery.
+KlipShot beeps once when it saves a copy, and twice when you copy the same thing again right after into the same folder (that repeat isn't saved). Turn them off with **Play a sound when a copy is saved**. If beeps are sometimes missing, as can happen on a remote desktop or VDI, turn on **Keep the sound ready so no beep is missed**. KlipShot then plays silence all the time, so Windows sees sound playing: the PC may not go to sleep by itself, and Bluetooth headphones stay connected and use battery.
 
 ## Backups
 

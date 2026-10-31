@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.27] - 2026-10-31
+
+### Fixed
+- **Copying the same thing again in another folder now saves it there.** If your last copy was in the InBox and you opened a folder and copied it again, KlipShot beeped twice and saved nothing. It now lands in the open folder, or in the InBox if that folder is locked. The beep matches what happens.
+
 ## [0.9.26] - 2026-10-31
 
 ### Fixed
