@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.26] - 2026-10-31
+
+### Fixed
+- **Quick paste stays still as you switch folders or search.** Near the bottom of the screen the list moved up and down with the number of clips it showed. It's now always the same height.
+
 ## [0.9.25] - 2026-10-31
 
 ### Added
