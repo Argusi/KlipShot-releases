@@ -69,6 +69,7 @@ Press **Ctrl+Alt+V** while you're typing in any app. A small list of your InBox 
 ![Quick paste in Notepad: Ctrl+Alt+V opens the list at the text cursor, typing "order" narrows it, and Enter pastes the tracking link](docs/quickpaste.gif)
 
 - Type to search the list.
+- Press **Tab** to go to the next folder, or **Shift+Tab** for the one before, or click the folder's name at the top right to pick from a list. Your search stays as you switch, and quick paste opens on the InBox each time.
 - Use Up and Down, Page Up and Page Down, or the mouse wheel to pick a clip.
 - Press **Enter** or click it to paste it where you were typing.
 - **Right-click** a clip to paste it as plain text, without its formatting, or with another Paste as text change, such as UPPERCASE or Single line.
@@ -105,7 +106,7 @@ To move a clip without pinning it, right-click it and choose **Move to → Top**
 - Click **New folder** under the folder list (or File → New folder, or right-click **Folders**) to create one. Right-click a folder to rename, lock or delete it. Deleting a folder moves its clips to the top of the InBox, and the folders inside it move up a level. If that takes the InBox over its limit, KlipShot says how many of the oldest clips will go before you agree.
 - **Folders inside folders:** right-click a folder and choose **New folder inside**, or drag a folder onto another one. Click the arrow beside a folder to show or hide the folders inside it; KlipShot remembers which are open. The InBox can't hold folders.
 - New copies go into the folder you have open. The window title shows which one that is, for example **KlipShot – InBox** or **KlipShot – Work**.
-- To move a clip, drag it onto a folder, or right-click it and choose **Move to** and the folder (also in the Edit menu).
+- To move a clip, drag it onto a folder, or right-click it and choose **Move to** and the folder (also in the Edit menu). If moving clips takes the InBox over its limit, KlipShot says how many of the oldest clips will go before you agree.
 - A **locked** folder (🔒) never receives new copies. Those go to the InBox, which turns bold so you can see where they went. A note above the clip list reminds you when the open folder is locked.
 - **Go back to the InBox after pasting** (Tools → Settings → Pasting) switches back to the InBox after you paste from a folder, so your next copy lands there.
 
@@ -197,13 +198,19 @@ Recipes work with Enter, a double-click and quick paste, but not PowerPaste, and
 
 ## Smart actions
 
-When a clip has web links, email addresses, US street addresses or phone numbers in it, or an image clip has a QR code, a **Show links** button appears above the preview, with how many it found. Nothing pops up, and the clip still pastes exactly as copied.
+When a clip has web links, email addresses, US street addresses, phone numbers, dates, file paths or tracking numbers in it, or an image clip has a QR code, a **Show links** button appears above the preview, with how many it found. Nothing pops up, and the clip still pastes exactly as copied.
 
-Click **Show links** and they become clickable: web links open in your browser, email addresses in your mail app, street addresses in Google Maps, and phone numbers open in your calling app, such as Phone Link, if you have one. **Hide links**, or picking another clip, goes back to the usual view. Right-click one to open it or **Copy to a new clip**, which saves just that link or address as its own clip and puts it on the clipboard. You can't edit a clip's text while its links are showing.
+Click **Show links** and they become clickable: web links open in your browser, email addresses in your mail app, street addresses in Google Maps, and phone numbers open in your calling app, such as Phone Link, if you have one. Dates open a new Google Calendar event to check and save, file and folder paths show in File Explorer, and tracking numbers open the carrier's tracking page. **Hide links**, or picking another clip, goes back to the usual view. Right-click one to open it or **Copy to a new clip**, which saves just that link or address as its own clip and puts it on the clipboard. You can't edit a clip's text while its links are showing.
 
 This works on image clips too, using the words KlipShot reads in the picture: each link is marked on the image, right where it is. Text read from a picture can have mistakes, so point at a mark to see what will open before you click it. Links shown only as words, such as "Click here", can't be found, because the address isn't in the picture.
 
-A QR code is marked on the picture too. Point at it to see what it holds before you open it, as a code can lead anywhere. If it holds a link, phone number or email address, clicking opens it. If it holds anything else, clicking copies it to a new clip. For Wi-Fi details, KlipShot shows only the network's name, but the copy includes the password.
+A QR code is marked on the picture too. Point at it to see what it holds before you open it, as a code can lead anywhere. If it holds a link, phone number or email address, clicking opens it. If it holds Wi-Fi details, clicking connects to that network. Windows saves it but won't join it by itself later, and if you already have a saved network with that name, KlipShot asks before replacing it. If it holds anything else, clicking copies it to a new clip. For Wi-Fi details, KlipShot shows only the network's name, but **Copy to a new clip** includes the password.
+
+Paths can start with a drive, a network share such as `\\server\share`, or a variable such as `%AppData%`. A path on your PC is only picked up if it exists, and a line number after it, as in `C:\app\main.cs(12,5)`, is left out. Paths on network, USB and disc drives aren't checked, as they can be slow to answer, and they need quotes if they have spaces. Clicking a file selects it in File Explorer and never runs it.
+
+Dates can be written like `Nov 4`, `Tue Nov 4 at 2pm`, `4 November 2026`, `11/4/2026`, `2026-11-04`, `next Tuesday` or `tomorrow at 3pm`, and can have a time range such as `2-3:30pm`, before or after the date. `Nov 4-6` adds an all-day event over those days. Written with slashes, they're month first and need the year. "Today", "tomorrow", "tonight" and a plain weekday need a time, and these count from when you copied the clip, so an old clip's "tomorrow" is the day after that copy. A date with no year is this year, or next year if it's over a month ago. "Next Tuesday" means the first Tuesday after the day you copied it. Dates in the past or that repeat, such as "last Friday", "every Monday", "Monday last week" or a year in the 1900s, aren't picked up, and neither is a date in a file name. A lowercase `2 may` needs a year or a time, and a short weekday with only a time needs a capital, as in `Sat at 3pm`, so "he sat at 3pm" is left alone. A clip with more than 20 dates is taken for a log or list, so none of them are shown. A time zone in capitals after the time, such as `2pm EST`, `2pm PT` or `14:00 UTC`, is kept on the event. With no end time, an event lasts an hour, and with no time at all, it lasts all day. The event is named after the line the date is on, which goes to Google only when you click. Point at a date to see how it was read.
+
+UPS and USPS tracking numbers are checked with their check digits. FedEx numbers are plain digits, so they need "FedEx" just before them.
 
 Phone numbers need an area code and separators, such as `(904) 555-1234`, `904-555-1234` or `+1 904 555 1234`, or a + and a country code. Ten digits in a row aren't picked up, as those are as often order numbers.
 
@@ -218,6 +225,19 @@ Addresses are US style and can be in the middle of other text. Capitals don't ma
 PO boxes aren't picked up. KlipShot leans towards finding more, so now and then it may underline something that isn't an address, or start from the wrong word. That's harmless: the clip isn't changed, and the underline shows exactly what was found.
 
 To turn them off, all or by type, go to Tools → Settings → Smart actions.
+
+### Your own rules
+
+In Tools → Settings → Smart rules, you can add your own patterns. A rule has a name, a regular expression to find, and an address to open. In the address, `$0` is the whole match and `$1` to `$9` are its groups:
+
+| Name | Find | Open |
+|---|---|---|
+| Ticket | `[A-Z]{2,5}-\d+` | `https://acme.atlassian.net/browse/$0` |
+| Invoice | `Invoice (\d+)` | `https://billing.example.com/inv/$1` |
+
+Enter some text in **Try it on** to see what a rule would open, then click **Save**. Rules work in text and image clips and in quick paste, and are included in backups.
+
+Addresses must start with `http://`, `https://` or `mailto:`, so a rule can't start a program, and what's matched is escaped before it goes in the address. Built-in types go first, so a rule can't take text they've already found, and earlier rules beat later ones. A rule that takes too long on a clip gives up, keeping what it found so far, and each rule finds at most 1,000 matches in a clip.
 
 ## Keys
 
@@ -266,6 +286,7 @@ In any app, while KlipShot runs:
 | --- | --- |
 | Pasting | Keep the window open after pasting, Double-click only copies, Go back to the InBox after pasting, [recipes](#recipes) on or off and how they write dates and times; quick paste is explained here |
 | Smart actions | [Turn Show links off](#smart-actions), all or by type |
+| Smart rules | [Add your own patterns](#your-own-rules) to Show links |
 | Keys | Every KlipShot key, whether it works, and [Try again](#keys) |
 | Starting up | Start KlipShot when I sign in to Windows, Show the window when KlipShot starts, Import from a portable copy |
 | History | [Clips to keep in the InBox](#history-size), [private copies](#where-your-clips-are-stored) |

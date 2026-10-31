@@ -14,7 +14,7 @@ KlipShot used to be called Clippy.
 - Screen clips: F9 for a region, Print Screen for the whole screen, a delayed clip for menus and tooltips, and a scrolling clip for whole web pages. Mark them up with arrows, boxes, a pen, a highlighter, text and blur, and crop them.
 - Copy the words out of any image clip; search finds images by the text in them.
 - Recipes: blanks like `{{name}}` and `{{date+3}}` are filled in as you paste.
-- Show links: make the web links, emails, US addresses and phone numbers in any clip clickable, even in pictures, and read QR codes.
+- Show links: make the web links, emails, US addresses, phone numbers, dates, file paths and tracking numbers in any clip clickable, even in pictures, add your own patterns, and read QR codes, including joining Wi-Fi.
 - Automatic backups, ten themes (or follow Windows light and dark), optional sounds, and updates from inside the app.
 - A setup, or one portable `KlipShot.exe` you unzip anywhere. Neither needs admin rights, and everything stays on your PC.
 

@@ -2,6 +2,37 @@
 
 ## [Unreleased]
 
+## [0.9.25] - 2026-10-31
+
+### Added
+- **File and folder paths are smart actions.** Show links finds paths on your PC that exist, network and USB paths, and paths such as `%AppData%\KlipShot`. Clicking one shows it in File Explorer, and a file is selected, never run.
+- **Dates and times are smart actions.** `Lunch Tue Nov 4 at 2pm`, `next Tuesday` or `tomorrow at 3pm` opens a new Google Calendar event, named after the line the date is on. Words like "tomorrow" count from when the clip was copied.
+- **Tracking numbers are smart actions.** UPS, USPS and FedEx numbers open the carrier's tracking page. FedEx numbers need "FedEx" just before them.
+
+- **Quick paste can switch folders.** Tab and Shift+Tab go through your folders, or click the folder's name at the top of the list. It opens on the InBox each time.
+- **Your own smart actions.** Tools → Settings → Smart rules turns any regular expression into a clickable link, such as a ticket number that opens its page. There's a box to try a rule out before saving it.
+
+### Changed
+- **Clicking a Wi-Fi QR code connects to the network.** Windows saves it but won't join it by itself later, and KlipShot asks before replacing a saved network with the same name. **Copy to a new clip** still gets the details.
+- **Much faster with many image clips.** Pictures now have their own place in the database, so listing, pinning and reordering clips no longer reads every picture. The first start after updating moves them, with a small notice on screen meanwhile. That takes about half a minute for 500 MB of clips, and the database from before is kept as `KlipShot.before-v2.db`. An older KlipShot can still open your clips afterwards, but won't show the pictures.
+- **Arrowing through long text clips is smoother.** Links in long clips are looked for in the background.
+- **Search is quicker on very long clips.** In clips over 100,000 characters it matches letters ignoring case, without language rules such as treating accented letters alike.
+- **PowerPaste is steadier.** It watches for Ctrl+V on its own thread, so a slow clipboard can't lag your typing or make Windows stop telling it about the keys.
+- **A clipboard held by another app freezes KlipShot for less time:** about 3 seconds at most instead of about 11.
+- **Copying with sounds off is lighter.** KlipShot no longer reads the clipboard straight away just to pick a beep.
+- **Importing a portable copy checks it first,** as restoring a backup does: it says so if the file isn't a KlipShot database or came from a newer version.
+- **`KlipShot.log` stays small.** It keeps about the last megabyte.
+
+### Fixed
+- **KlipShot no longer deletes other programs' `.part` files.** At every start it removed all `.part` files from the backup folder, so choosing Downloads could delete unfinished browser downloads. It also leaves alone files that only look like its backups, such as your own `KlipShot-old.db`.
+- **Pinning a clip with unsaved edits no longer breaks the list.** It showed an error and the clip disappeared from the list until the folder was opened again. Your edit is now saved first, as it is for pasting or moving, and the saved clip is pinned.
+- **The InBox limit no longer removes a clip while you're editing it.** A new copy arriving could cause the same error. The clip stays until you've saved or undone your changes.
+- **Moving clips into a full InBox now says what will be deleted, and asks first.** Before, the next copy deleted the oldest clips with no warning.
+- **Remove extra spaces now removes them.** It only trimmed the ends of each line, so `a    b` stayed as it was.
+- **Pasting now says so when the app you were in has closed,** instead of doing nothing. The clip is still on the clipboard.
+- **A link followed by thousands of brackets or dots no longer freezes the window.**
+- **A copy KlipShot can't read no longer blames another app.** The notice said the clipboard was locked whatever went wrong.
+
 ## [0.9.24] - 2026-10-30
 
 ### Added
