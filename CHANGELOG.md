@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.29] - 2026-11-01
+
+### Fixed
+- **Pasting into an app running as administrator now says why nothing happened.** Windows blocks KlipShot's Ctrl+V there without any error, so the paste just seemed to fail. A notice now says so. The clip is on the clipboard, so pressing Ctrl+V yourself works.
+
 ## [0.9.28] - 2026-10-31
 
 ### Changed
