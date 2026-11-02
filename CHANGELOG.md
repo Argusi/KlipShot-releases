@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.9.31] - 2026-11-02
+
+### Added
+- **PowerPaste stops by itself after 2 minutes without a paste**, so a forgotten PowerPaste doesn't keep changing what Ctrl+V pastes. A notice says when it stops. To change the wait (15, 30 or 45 seconds, 1 or 2 minutes, or Never), click the notice, or use **Stop PowerPaste after no paste for** in Tools → Settings → Pasting.
+- **The tray icon shows when PowerPaste is on**, with an orange dot, and its tooltip says how far along you are, such as 3 of 10.
+
+### Changed
+- **The welcome note mentions quick paste and Settings.** It says that Ctrl+Alt+V picks a clip while you're typing in any app, without opening KlipShot's window, and that Tools → Settings is where you change KlipShot's keys, how pasting works, backups and much more.
+- **The "key in use" notice opens Settings.** When KlipShot starts and another program already has one of its keys, click the notice to go straight to Tools → Settings → Keys and pick a different key.
+
 ## [0.9.30] - 2026-11-02
 
 ### Added

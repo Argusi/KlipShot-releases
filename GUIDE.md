@@ -30,7 +30,7 @@ This guide describes the latest KlipShot. If something here is missing in yours,
 2. Click the paperclip icon by the clock (under **^**) to open KlipShot.
 3. Select a clip and press **Enter** (or click **Paste** on the toolbar). KlipShot hides and pastes it into the app you were using.
 
-The first time you open the window, a short welcome note explains this. Click **Got it** to hide it.
+The first time you open the window, a short welcome note explains this, along with [quick paste](#quick-paste), and points you to Tools → Settings. Click **Got it** to hide it.
 
 Clicking the tray icon opens or hides the window. Right-click it for **Open KlipShot**, **Stop PowerPaste**, the four screen clips (**Clip a region**, **Clip the whole screen**, **Clip a region in 5 seconds** (or however many seconds you've chosen), **Clip a scrolling region**), **Start KlipShot when I sign in** and **Quit KlipShot**. Closing the window (Esc or ✕) leaves KlipShot running in the tray, still saving what you copy; only **Quit KlipShot** stops it.
 
@@ -89,7 +89,9 @@ For pasting several clips in a row, for example into a form:
 
 You can also start from [quick paste](#quick-paste): right-click a clip and choose **Start PowerPaste here, then down the list** or **up the list**. If you've typed a search, it pastes only the matching clips. KlipShot's window stays closed.
 
-It stops by itself at the end of the list. To stop sooner, click **Stop PowerPaste**, which shows on the toolbar while PowerPaste is on (it is also in the tray menu). Starting PowerPaste during a search pastes only the matching clips. The first time you start PowerPaste, KlipShot explains how it works.
+While PowerPaste is on, the tray icon has an orange dot, and pointing at it shows which clip is next, such as **3 of 10**.
+
+It stops by itself at the end of the list, and after 2 minutes without a paste, so Ctrl+V goes back to normal if you forget it; a notice says so, and clicking it opens the setting. To change the wait (15, 30 or 45 seconds, 1 or 2 minutes, or Never), use **Stop PowerPaste after no paste for** in Tools → Settings → Pasting. To stop sooner, click **Stop PowerPaste**, which shows on the toolbar while PowerPaste is on (it is also in the tray menu). Starting PowerPaste during a search pastes only the matching clips. The first time you start PowerPaste, KlipShot explains how it works.
 
 ## Organising clips
 
@@ -328,6 +330,7 @@ In the KlipShot window:
 | Ctrl+C | Put the clip on the clipboard without pasting |
 | F2 | Rename the clip in the list (its content stays as it is) |
 | Ctrl+P | Pin the clip to the top, or unpin it |
+| Alt+Home, Alt+End | Move the clip to the top or bottom of the list |
 | Ctrl+E | Mark up an image clip |
 | Ctrl+T | Copy the words in an image clip as text |
 | Del | Delete the clip (or all the selected clips) |
@@ -355,7 +358,7 @@ In any app, while KlipShot runs:
 
 - **Where:** Tools → Settings → **Keys** lists every KlipShot key: quick paste, clip a region, clip the whole screen, the delayed clip and the scrolling clip. The last two have no key at first.
 - **Choices:** screen clips can use F7, F8, F9, Ctrl+Shift+F9, Print Screen, Ctrl+Print Screen or none. Quick paste can use Ctrl+Alt+V, Alt+Shift+V, Ctrl+Shift+V, Ctrl+Alt+Space or none. A key another KlipShot feature already uses isn't offered.
-- **Status:** each key shows **✓ Working**, **No key**, or **⚠ Another program has this key**. While KlipShot runs, other programs don't get its keys, but a program that took a key first keeps it. KlipShot also tells you at startup which keys are taken.
+- **Status:** each key shows **✓ Working**, **No key**, or **⚠ Another program has this key**. While KlipShot runs, other programs don't get its keys, but a program that took a key first keeps it. KlipShot also tells you at startup which keys are taken; click that notice to open this page.
 - **Try again:** close the program that has the key, then click **Try again**. Or pick a different key.
 
 ## Settings
@@ -364,7 +367,7 @@ In any app, while KlipShot runs:
 
 | Section | What's there |
 | --- | --- |
-| Pasting | Keep the window open after pasting, Double-click only copies, Go back to the InBox after pasting, [recipes](#recipes) on or off and how they write dates and times; quick paste is explained here |
+| Pasting | Keep the window open after pasting, Double-click only copies, Go back to the InBox after pasting, [how long PowerPaste waits for a paste](#powerpaste), [recipes](#recipes) on or off and how they write dates and times; quick paste is explained here |
 | Smart actions | [Turn Show links off](#smart-actions), all or by type |
 | Smart rules | [Add your own patterns](#your-own-rules) to Show links |
 | Keys | Every KlipShot key, whether it works, and [Try again](#keys) |
