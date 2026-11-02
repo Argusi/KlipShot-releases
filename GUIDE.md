@@ -50,6 +50,8 @@ KlipShot keeps text (with its formatting), images and copied files. The **InBox*
 
 Select a text clip and type in the preview pane. Once you change something, **Save changes** (Ctrl+S) and **Undo changes** appear: Undo changes goes back to the clip as it was. **Save changes makes a new clip** just above the original and selects it; the original stays as it was. If you keep editing the new clip and save again, it's updated rather than copied again. Clicking another clip, pasting or closing the window also saves your change this way. The new clip is plain text, so saving a formatted clip doesn't touch its formatting, but the new one has none. Ctrl+Z undoes your typing, back to the clip as it was shown. Untick **Word wrap** to see long lines as they are.
 
+**Zoom an image clip:** hold Ctrl and turn the mouse wheel over the picture, press Ctrl+= or Ctrl+-, or click the zoom buttons above it. Ctrl+0, or clicking the percentage, goes back to the usual size. Each clip starts at its usual size.
+
 ### History size
 
 **Clips to keep in the InBox** (Tools → Settings → History) sets how many clips the InBox keeps: 25 to 1000, 100 at first. When it's full, the clips at the bottom of the list are removed first. Pinned clips and clips in folders are never removed. A copy over 50 MB isn't saved; it stays on the clipboard, and a notice says so.
@@ -150,7 +152,7 @@ A screen clip opens in an editor, over the spot it came from (a tall scrolling c
 
 | Tool | Key | What it does |
 | --- | --- | --- |
-| Select | V | Click a mark to move it; Del removes it |
+| Select | V | Click a mark to move it; Del removes it. A selected text has a square at its corner: drag it to resize the text |
 | Arrow | A | Drag from the tail to the point |
 | Rectangle | R | An outlined box |
 | Pen | P | Draw freehand |
@@ -159,7 +161,9 @@ A screen clip opens in an editor, over the spot it came from (a tall scrolling c
 | Blur | B | Pixelates passwords, emails and other private details. The real pixels are replaced, so they can't be recovered |
 | Crop | C | Drag over the part to keep |
 
-Pick a colour and a line width on the toolbar (the width also sets the text size). KlipShot remembers the tool, colour and width you used last. Ctrl+Z undoes and Ctrl+Y redoes, including moves and crops.
+Pick a colour and a line width on the toolbar (the width also sets the text size). KlipShot remembers the tool, colour and width you used last. With a text selected, picking a colour or width changes that text too. Ctrl+Z undoes and Ctrl+Y redoes, including moves and crops.
+
+**Zoom:** hold Ctrl and turn the mouse wheel, press Ctrl+= or Ctrl+-, or use the zoom buttons at the end of the toolbar. The percentage is the real size, so 100% is one pixel of the clip to one pixel of the screen. Ctrl+0, or clicking the percentage, goes back to the size the editor opened at. Once you zoom, the window stays the size it is, and the picture scrolls.
 
 - **Copy** (Enter or Ctrl+C) puts the marked-up clip on the clipboard and closes the editor. KlipShot saves it as an image clip like any other copy.
 - **Save** (Ctrl+S) saves it as a PNG file. The editor stays open.
@@ -331,6 +335,7 @@ In the KlipShot window:
 | Ctrl+A | Select every clip in the list |
 | Ctrl+F | Search the clips in the open folder |
 | Ctrl+S | Save an edited text clip (as a new clip) |
+| Ctrl+wheel, Ctrl+= or Ctrl+- | Zoom an image clip in the preview (Ctrl+0 goes back) |
 | Esc | Clear the search, or close the window (KlipShot keeps running in the tray) |
 
 In any app, while KlipShot runs:

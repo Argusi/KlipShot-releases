@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.9.30] - 2026-11-02
+
+### Added
+- **Zoom in and out on image clips.** In the preview pane and in the image editor, hold Ctrl and turn the mouse wheel, use Ctrl+= and Ctrl+-, or click the zoom buttons. The spot under the mouse stays where it is. Ctrl+0, or clicking the percentage, goes back to the usual size. This helps with long scrolling clips, which can be hard to read at the size they open at. Each clip opens in the preview at its usual size.
+- **Resize text in the image editor.** With the Select tool, click a text, then drag the small square at its corner to make it bigger or smaller. Picking a line width or a colour while a text is selected changes that text too. Before, the only way to fix a text's size was to delete it and type it again.
+
 ## [0.9.29] - 2026-11-01
 
 ### Fixed
