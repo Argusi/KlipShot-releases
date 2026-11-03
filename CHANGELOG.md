@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.36] - 2026-11-03
+
+### Changed
+- **A copied recipe asks for its blanks when you paste it.** Copy, Ctrl+C, and a double-click when it's set to copy now put a recipe on the clipboard as it is, just as they do any other clip. The next Ctrl+V (or Shift+Insert) in your app asks for the blanks, as quick paste does, and pastes the recipe filled in. The filled-in text is also saved in the InBox. In 0.9.35 they asked straight away, when you only meant to copy it. KlipShot watches for that one paste only while the recipe is on the clipboard. An app running as administrator hides Ctrl+V from KlipShot, so there a notice offers to fill the blanks in first. The guide's Recipes section has the details.
+
 ## [0.9.35] - 2026-11-03
 
 ### Added

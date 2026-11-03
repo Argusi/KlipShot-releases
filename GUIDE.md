@@ -214,7 +214,17 @@ Code uses double braces too, so these are left as they are and never asked about
 
 Simple template code such as `{{ title }}` can't be told apart from a recipe, so it's still asked about. If you copy templates or code that use double braces, press **Paste as it is** when asked, or turn off **Fill in recipes when pasting** in Settings.
 
-Recipes work with Enter, a double-click, Copy to clipboard (Ctrl+C) and quick paste, but not PowerPaste, and they paste as plain text. Copy asks for the blanks straight away and puts the filled-in text on the clipboard. File recipes in a folder or pin them to keep them.
+Recipes work with Enter, a double-click, Copy to clipboard (Ctrl+C) and quick paste, but not PowerPaste, and they paste as plain text. File recipes in a folder or pin them to keep them.
+
+**Copying a recipe.** Copy to clipboard (Ctrl+C), and a double-click when **Double-click only copies** is on, put the recipe on the clipboard as it is. Then press Ctrl+V (or Shift+Insert) in your app: KlipShot asks for the blanks, as quick paste does, and pastes the recipe filled in.
+
+- It asks once. After that the filled-in text is on the clipboard, so another Ctrl+V pastes it again. To fill the recipe in differently, copy it again.
+- The filled-in text is also saved as a new clip in the InBox, as if you'd copied it. The recipe itself stays as it was.
+- **Cancel** pastes nothing, and the next Ctrl+V asks again. **Paste as it is** pastes the blanks as they are.
+- `{{clipboard}}` is what you'd copied before the recipe.
+- KlipShot stops waiting as soon as something else is copied, or recipes are turned off. While it waits, it watches only for Ctrl+V and Shift+Insert, and lets them through as usual in KlipShot itself.
+- Paste from an app's own menu or a right-click doesn't go through KlipShot, so it pastes the blanks as they are.
+- Windows doesn't let KlipShot see Ctrl+V in an app running as administrator. When one comes to the front, a notice offers to fill in the blanks straight away. Click it, and Ctrl+V pastes the filled-in text there.
 
 ## Smart actions
 
