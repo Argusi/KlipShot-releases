@@ -154,14 +154,14 @@ A screen clip opens in an editor, over the spot it came from (a tall scrolling c
 
 | Tool | Key | What it does |
 | --- | --- | --- |
-| Select | V | Click a mark to move it; Del removes it. A selected text has a square at its corner: drag it to resize the text |
+| Select | V | Click a mark to move it; Del removes it. A selected mark shows small squares (handles): drag one to reshape it. A box, highlight or blur has one on each corner and side; an arrow has one at each end, to move just that end; a text has one at its corner, to resize it |
 | Arrow | A | Drag from the tail to the point |
 | Rectangle | R | An outlined box |
 | Pen | P | Draw freehand |
 | Highlighter | H | A see-through box over text |
 | Text | T | Click, type, then Enter (Shift+Enter for a new line, Esc to cancel) |
 | Blur | B | Pixelates passwords, emails and other private details. The real pixels are replaced, so they can't be recovered |
-| Crop | C | Drag over the part to keep |
+| Crop | C | Drag over the part to keep. While the Crop tool is on, the whole picture shows with the cut-off part dimmed, so you can drag the crop's handles to adjust it, or drag a new one |
 
 Pick a colour and a line width on the toolbar (the width also sets the text size). KlipShot remembers the tool, colour and width you used last. With a text selected, picking a colour or width changes that text too. Ctrl+Z undoes and Ctrl+Y redoes, including moves and crops.
 

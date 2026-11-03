@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.9.34] - 2026-11-03
+
+### Added
+- **Reshape boxes, arrows, highlights, blurs and crops in the image editor.** With the Select tool, click a mark and drag one of the small squares around it. A box, highlight or blur has one on each corner and side, and an arrow one at each end, so you can re-aim it without redrawing it. Before, only text could be resized.
+- **Adjust a crop.** With the Crop tool, the whole picture shows with the cut-off part dimmed, and the crop has handles to drag its edges in or out. Before, a crop that was a little off had to be undone and drawn again.
+
 ## [0.9.33] - 2026-11-02
 
 ### Changed
