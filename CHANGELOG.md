@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.33] - 2026-11-02
+
+### Changed
+- **Screen clips find faint pane borders.** Where a dark theme sets a menu or sidebar off from the page by only a slightly different shade, as in Plex, the screen clip now outlines each one as its own pane, and dragged regions snap to that line.
+- **Screen clips outline thin bars.** A banner, toolbar or header bar only 24 pixels tall, such as the orange banner along the top of a store's page or the bar with a site's logo and search box, is now outlined as its own pane when it's long enough not to be a button.
+- **Screen clips ignore what a page hides.** Pop-ups a page keeps but doesn't show, such as Amazon SiteStripe's, and a hover preview that has just faded no longer stop the panes you can see from being outlined. On YouTube, the videos under a closed preview can be picked one by one again.
+- **The middle of a window by the taskbar can be outlined.** A pane running down to a window's bottom edge, such as the chat in the Claude app, was skipped because the taskbar touched it.
+
 ## [0.9.32] - 2026-11-02
 
 ### Added
