@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [0.9.35] - 2026-11-03
+
+### Added
+- **Help → What's new.** Opens the full list of changes in every version, so you don't have to look for it on GitHub.
+
+### Fixed
+- **Copying a recipe asks for its blanks.** Copy, Ctrl+C, and double-click when it's set to copy put a recipe on the clipboard with its {{blanks}} still in, so pressing Ctrl+V in your app pasted {{name}} instead of asking for it. They now ask first, as Paste does, and put the filled-in text on the clipboard. Cancel leaves the clipboard as it was.
+
+### Changed
+- **Recipes leave code alone.** Double braces that belong to template or CI code are no longer taken for blanks, so copying them doesn't bring up the window asking for them. That covers a name with `.`, `(`, `=` or `"` in it, such as `{{ user.name }}`; one starting with `#` or `/`, such as `{{#each}}`; `{{0}}`; `${{ secrets.TOKEN }}`; and `{{{raw}}}`. A recipe that used a dot in a blank's name, such as `{{ref no.}}`, now needs it taken out. The guide's Recipes section lists the rules.
+
 ## [0.9.34] - 2026-11-03
 
 ### Added

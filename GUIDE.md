@@ -2,7 +2,7 @@
 
 Everything KlipShot does, by task. For a short overview and the download, see the [README](README.md).
 
-This guide describes the latest KlipShot. If something here is missing in yours, update with **Help → Check for updates**, or see the [CHANGELOG](CHANGELOG.md) for when it arrived.
+This guide describes the latest KlipShot. If something here is missing in yours, update with **Help → Check for updates**, or see the [CHANGELOG](CHANGELOG.md) for when it arrived. **Help → What's new** opens the CHANGELOG too.
 
 - [Getting started](#getting-started)
 - [The clip list](#the-clip-list)
@@ -198,9 +198,23 @@ When you paste it, a small window asks for each blank once, however often it app
 | `{{date+3}}`, `{{date-1}}` | That many days from today or before it |
 | `{{time}}` | The time now |
 
-To choose how dates and times are written, such as `2026-10-30` or `8:06 PM`, go to Tools → Settings → Pasting. At first they follow your Windows settings. If you copy templates or code that use double braces, turn off **Fill in recipes when pasting** there, or press **Paste as it is** when asked.
+To choose how dates and times are written, such as `2026-10-30` or `8:06 PM`, go to Tools → Settings → Pasting. At first they follow your Windows settings.
 
-Recipes work with Enter, a double-click and quick paste, but not PowerPaste, and they paste as plain text. Copy to clipboard (Ctrl+C) copies the clip with its blanks. File recipes in a folder or pin them to keep them.
+A blank's name can be up to 40 characters on one line, with words, numbers, spaces and marks such as `'`, `-`, `#` and `/`: `{{customer's name}}`, `{{order #}}` and `{{phone/email}}` all work. Upper and lower case are the same blank.
+
+Code uses double braces too, so these are left as they are and never asked about:
+
+| Left alone | Looks like |
+|---|---|
+| A name with `.`, `(`, `=` or `"` in it | `{{ user.name }}`, `{{ .Values.image }}`, `{{ total(items) }}` |
+| A name starting with `#` or `/` | `{{#each items}}`, `{{/if}}` |
+| Just a number | `{{0}}` |
+| Braces after `$` | `${{ secrets.TOKEN }}` |
+| Three braces | `{{{raw}}}` |
+
+Simple template code such as `{{ title }}` can't be told apart from a recipe, so it's still asked about. If you copy templates or code that use double braces, press **Paste as it is** when asked, or turn off **Fill in recipes when pasting** in Settings.
+
+Recipes work with Enter, a double-click, Copy to clipboard (Ctrl+C) and quick paste, but not PowerPaste, and they paste as plain text. Copy asks for the blanks straight away and puts the filled-in text on the clipboard. File recipes in a folder or pin them to keep them.
 
 ## Smart actions
 
