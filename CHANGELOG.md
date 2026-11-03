@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.9.32] - 2026-11-02
+
+### Added
+- **A notice says when KlipShot's keys can't work.** Windows doesn't pass keys like F9 and Ctrl+Alt+V to KlipShot while an app running as administrator is in front, so pressing them there did nothing, with no sign of why. The first time such an app comes to the front, a notice now says so. Click the taskbar first, or start the clip from the tray icon. The guide's Troubleshooting section explains more.
+
 ## [0.9.31] - 2026-11-02
 
 ### Added

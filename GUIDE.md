@@ -350,7 +350,7 @@ In any app, while KlipShot runs:
 | Print Screen | Clip the whole screen |
 | Ctrl+V while PowerPaste is on | Paste the next clip |
 
-**Help → Keyboard shortcuts** lists them too.
+**Help → Keyboard shortcuts** lists them too. These keys don't work while an app running as administrator is in front (see [Troubleshooting](#troubleshooting)).
 
 ### Changing keys
 
@@ -443,6 +443,7 @@ Everything stays on your PC. KlipShot only connects to the internet when you cho
 
 - **A key does nothing.** Open Tools → Settings → [Keys](#changing-keys). If it says another program has the key, pick a different one, or close that program and click Try again.
 - **Print Screen opens the Windows snipping tool instead.** Turn off **Use the Print Screen key to open screen capture** in Windows Settings → Accessibility → Keyboard, then click Try again on the Keys page.
+- **KlipShot's keys do nothing while an app running as administrator is in front.** Windows doesn't pass keys from an administrator app to programs that aren't running as administrator, so KlipShot never sees them. The first time such an app comes to the front, a notice says so. Click the taskbar or desktop first and then press the key, or start the clip from the tray icon. Whatever is on screen is still captured. For a menu or tooltip in that app, use the delayed clip from the tray and open it before the countdown ends.
 - **Quick paste opens at the mouse, not where I'm typing.** Some apps, including many browsers, draw their own text cursor and don't tell Windows where it is. The list then opens at the mouse; it still pastes where you were typing.
 - **A paste lands in the wrong window, or nowhere.** KlipShot pastes into the last window you used before it. Click into the place you want to paste, then open KlipShot (or use [quick paste](#quick-paste), which never leaves the app you're in). Apps running as administrator don't accept pastes sent by KlipShot unless KlipShot runs as administrator too. If that's what stopped the paste, or Windows won't switch back to your app, a notice says so and the clip is on the clipboard: press Ctrl+V there.
 - **KlipShot says it couldn't start.** If its database is damaged, say Yes to restore a backup. The damaged file is kept as `KlipShot.before-restore.db`.
