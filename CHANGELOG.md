@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.9.37] - 2026-11-03
+
+### Changed
+- **Clean up links handles shopping links.** Amazon, eBay, AliExpress, Walmart and Etsy product links are cut down to just the product, so a long Amazon search-result link pastes as `https://www.amazon.com/dp/B0H2C4RDN6`. A chosen variant and affiliate tags are kept. Other pages on those sites, and YouTube links, lose only their tracking tags, and links KlipShot doesn't recognise are never rebuilt. A full stop or bracket after a link is no longer taken as part of it.
+- **Clean up links knows more sites.** Target, Best Buy, LinkedIn, X (Twitter), Instagram, TikTok, Reddit and Spotify links lose their share and tracking tags. Redirect links from Google search results, Facebook, Instagram, Outlook Safe Links, YouTube, LinkedIn and Reddit are swapped for the real link they lead to.
+- **Clean up links says what it did.** A notice after pasting tells you how many tracking tags and redirects it removed.
+
 ## [0.9.36] - 2026-11-03
 
 ### Changed
