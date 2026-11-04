@@ -32,7 +32,7 @@ This guide describes the latest KlipShot. If something here is missing in yours,
 
 The first time you open the window, a short welcome note explains this, along with [quick paste](#quick-paste), and points you to Tools → Settings. Click **Got it** to hide it.
 
-Clicking the tray icon opens or hides the window. Right-click it for **Open KlipShot**, **Stop PowerPaste**, the four screen clips (**Clip a region**, **Clip the whole screen**, **Clip a region in 5 seconds** (or however many seconds you've chosen), **Clip a scrolling region**), **Start KlipShot when I sign in** and **Quit KlipShot**. Closing the window (Esc or ✕) leaves KlipShot running in the tray, still saving what you copy; only **Quit KlipShot** stops it.
+Clicking the tray icon opens or hides the window. Right-click it for **Open KlipShot**, **Stop PowerPaste**, the four screen clips (**Clip a region**, **Clip the whole screen**, **Clip a region in 5 seconds** (or however many seconds you've chosen), **Clip a scrolling region**), **Start KlipShot when I sign in**, **Check for updates...** and **Quit KlipShot**. Closing the window (Esc or ✕) leaves KlipShot running in the tray, still saving what you copy; only **Quit KlipShot** stops it.
 
 ## The clip list
 
@@ -430,7 +430,7 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 ## Updates
 
-**Help → Check for updates** asks GitHub for the latest version. If there's a newer one, KlipShot asks whether to update now. Nothing is downloaded unless you say yes. Then KlipShot:
+**Help → Check for updates** (also in the tray icon's right-click menu) asks GitHub for the latest version. If there's a newer one, KlipShot asks whether to update now. Nothing is downloaded unless you say yes. Then KlipShot:
 
 1. Downloads the new version (about 70 MB) from GitHub, showing its progress. You can cancel. An installed KlipShot downloads the setup; a portable one downloads the zip.
 2. Checks it against the SHA-256 checksum GitHub publishes for the file, and refuses anything that doesn't match.

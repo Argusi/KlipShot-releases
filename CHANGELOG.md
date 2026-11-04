@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.9.38] - 2026-11-03
+
+### Added
+- **Check for updates in the tray menu.** Right-click the tray icon and choose **Check for updates...**. It checks as Help → Check for updates does, without opening the window.
+
+### Fixed
+- **Update questions come to the front.** With the window closed, as when you click the "update available" notice, the questions could open behind other apps. They now show in front, in the middle of the screen.
+
 ## [0.9.37] - 2026-11-03
 
 ### Changed
