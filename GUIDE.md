@@ -432,7 +432,7 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 **Help → Check for updates** (also in the tray icon's right-click menu) asks GitHub for the latest version. If there's a newer one, KlipShot asks whether to update now. Nothing is downloaded unless you say yes. Then KlipShot:
 
-1. Downloads the new version (about 70 MB) from GitHub, showing its progress. You can cancel. An installed KlipShot downloads the setup; a portable one downloads the zip.
+1. Downloads the new version from GitHub, showing its progress. You can cancel. An installed KlipShot downloads the setup (about 55 MB); a portable one downloads the zip (about 75 MB).
 2. Checks it against the SHA-256 checksum GitHub publishes for the file, and refuses anything that doesn't match.
 3. Installed: quits and runs the setup without any questions, which installs the new version and starts it. The new KlipShot then deletes the downloaded setup, so nothing is left behind.
    Portable: swaps `KlipShot.exe` for the new one and restarts. The old copy is kept as `KlipShot.old.exe` until the new one starts, then deleted.
@@ -459,6 +459,8 @@ Clips and settings are kept in `KlipShot.db` next to `KlipShot.exe`, so everythi
 
 When an update changes how `KlipShot.db` is laid out, KlipShot first saves a copy of it as it was, such as `KlipShot.before-v2.db`, in the same folder, and tells you. Only the latest copy is kept. To go back to it, use **Restore a backup...** in Tools → Settings → Backups. If the update can't finish, your clips are left as they were. If you go back to an older KlipShot after using a newer one, it warns that some newer things may be missing.
 
+Deleting clips frees space inside `KlipShot.db` but doesn't shrink the file. Once a quarter of it is free, as after deleting a lot of pictures, KlipShot compacts it the next time it starts. With a big database that takes a few seconds, and a small "Tidying up your clips..." notice shows meanwhile.
+
 **Private copies:** password managers usually mark what they copy so clipboard tools leave it out, and KlipShot does. To save those copies too, untick **Don't save copies that apps mark as private** in Tools → Settings → History.
 
 **Other private things you copy are saved**, like everything else, including a password copied from anywhere that doesn't mark it. `KlipShot.db` and its backups aren't encrypted, so anyone who can open your Windows account's files can read them. To remove something, select the clip and press Del; it's then gone from KlipShot, though older backups still have it until they're replaced.
@@ -473,6 +475,6 @@ Everything stays on your PC. KlipShot only connects to the internet when you cho
 - **Quick paste opens at the mouse, not where I'm typing.** Some apps, including many browsers, draw their own text cursor and don't tell Windows where it is. The list then opens at the mouse; it still pastes where you were typing.
 - **A paste lands in the wrong window, or nowhere.** KlipShot pastes into the last window you used before it. Click into the place you want to paste, then open KlipShot (or use [quick paste](#quick-paste), which never leaves the app you're in). Apps running as administrator don't accept pastes sent by KlipShot unless KlipShot runs as administrator too. If that's what stopped the paste, or Windows won't switch back to your app, a notice says so and the clip is on the clipboard: press Ctrl+V there.
 - **KlipShot says it couldn't start.** If its database is damaged, say Yes to restore a backup. The damaged file is kept as `KlipShot.before-restore.db`.
-- **Copy beeps are sometimes missing**, often on a remote desktop or VDI. Turn on **Keep the sound ready so no beep is missed** in Tools → Settings → Sounds and look.
+- **Copy beeps are sometimes missing**, often on a remote desktop or VDI. Turn on **Keep the sound ready so no beep is missed** in Tools → Settings → Sounds.
 - **Copy text from image finds nothing.** Windows reads the text in the languages set up in Windows; add the language's optical character recognition (see [Text in images](#text-in-images)). Handwriting and stylised lettering are often not read.
 - **Windows says "Windows protected your PC".** KlipShot isn't code-signed. Click **More info**, then **Run anyway**.

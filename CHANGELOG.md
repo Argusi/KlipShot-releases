@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-04
+
+KlipShot 1.0. Thank you to everyone who used the 0.9 versions and said what wasn't right. This release is mostly small fixes found in a last full check before 1.0.
+
+### Fixed
+- **KlipShot says so when it tidies up at start.** After a lot of picture clips are deleted, KlipShot compacts its database the next time it starts. With a big database that takes a few seconds, and nothing showed meanwhile, so it could look as if KlipShot hadn't started. A small "Tidying up your clips..." notice now shows until it's done.
+- **PowerPaste skips image clips deleted during a run.** It used to put nothing on the clipboard when it reached one; it now goes on to the next clip.
+- **Each screen clip key stops only its own clip.** The delayed clip key no longer stops a scrolling clip, and the scrolling clip key no longer cancels a countdown. Pressing a key again, or Esc for a scrolling clip, still stops it.
+
 ## [0.9.38] - 2026-11-03
 
 ### Added
