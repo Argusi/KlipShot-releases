@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-05
+
+### Added
+- **Screen clips straight to the clipboard.** Turn on Tools → Settings → Screen clips → **Copy screen clips straight to the clipboard, without the editor**, and every screen clip (region, whole screen, delayed, scrolling) is saved in the InBox and put on the clipboard at once, ready to paste. A short "Copied to clipboard" note shows at the bottom right. To mark one up later, select it and press **Ctrl+E** (Edit image).
+
 ## [1.0.0] - 2026-11-04
 
 KlipShot 1.0. Thank you to everyone who used the 0.9 versions and said what wasn't right. This release is mostly small fixes found in a last full check before 1.0.

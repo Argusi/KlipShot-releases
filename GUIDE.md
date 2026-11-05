@@ -136,6 +136,8 @@ Press **F9** anywhere to clip a region. The screen freezes and dims, so open men
 
 Press **Print Screen** to clip the whole screen (every monitor). Both are also in the tray icon's menu. Each clip opens in the [markup editor](#the-markup-editor).
 
+**Skip the editor:** to paste clips right away and mark them up later only if you need to, turn on Tools → Settings → Screen clips → **Copy screen clips straight to the clipboard, without the editor**. Each screen clip is then saved in the InBox and put on the clipboard as soon as you take it, and "Copied to clipboard" shows for a moment at the bottom right. To mark one up later, use [Edit image](#the-markup-editor) (**Ctrl+E**).
+
 **Delayed clip:** for a menu, tooltip or hover effect that only shows while you use the mouse, right-click the tray icon and choose **Clip a region in 5 seconds** (the number follows your setting). Then open what you want in the clip. A countdown shows at the bottom right of the screen, without taking the focus, so menus stay open. When it ends, the screen freezes as with F9. Choose 3, 5 or 10 seconds in Tools → Settings → Screen clips, and give it a key under [Keys](#keys). Pressing the key again during the countdown stops it.
 
 **Scrolling clip:** to clip more than fits on the screen, such as a long web page, document or chat, right-click the tray icon and choose **Clip a scrolling region** (or give it a key under [Keys](#keys)). Then drag over the part that scrolls, or click it to take that pane. KlipShot scrolls it down a screenful at a time and joins what comes into view into one tall clip, which opens in the editor.
@@ -400,7 +402,7 @@ In any app, while KlipShot runs:
 | Starting up | Start KlipShot when I sign in to Windows, Show the window when KlipShot starts, Import from a portable copy |
 | History | [Clips to keep in the InBox](#history-size), [private copies](#where-your-clips-are-stored) |
 | Backups | [Automatic backups, Back up now and Restore](#backups) |
-| Screen clips | How long a delayed clip waits |
+| Screen clips | How long a delayed clip waits; copying clips straight to the clipboard without the editor |
 | Sounds and look | [Sounds](#sounds), always on top, button labels |
 | Updates | [Check for updates when KlipShot starts](#updates) |
 
