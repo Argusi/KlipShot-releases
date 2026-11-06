@@ -410,6 +410,8 @@ In any app, while KlipShot runs:
 
 KlipShot beeps once when it saves a copy, and twice when you copy the same thing again right after into the same folder (that repeat isn't saved). Turn them off with **Play a sound when a copy is saved**. If beeps are sometimes missing, as can happen on a remote desktop or VDI, turn on **Keep the sound ready so no beep is missed**. KlipShot then plays silence all the time, so Windows sees sound playing: the PC may not go to sleep by itself, and Bluetooth headphones stay connected and use battery.
 
+Some remote desktops, such as Citrix, still pause their sound after a while of silence, and the first beep after that is lost. So while the sound is kept ready, KlipShot plays a faint pulse, far too quiet to hear, every 10 seconds. Change how often with **Faint pulse to keep a remote desktop's sound awake, every**. If the first beep after a pause is still missing, choose a shorter time.
+
 ## Backups
 
 **Back up my clips automatically** (Tools → Settings → Backups) saves a copy of all your clips, folders and settings every hour, every 6 hours, every day or every week while KlipShot runs. It is off unless you turn it on. **Back up now** makes a copy straight away, whether automatic backups are on or not, and **Open backups folder** shows where they are. **Change folder...** sends backups to a folder you pick instead, such as another drive or a synced folder; **Use default folder** goes back.
@@ -477,6 +479,6 @@ Everything stays on your PC. KlipShot only connects to the internet when you cho
 - **Quick paste opens at the mouse, not where I'm typing.** Some apps, including many browsers, draw their own text cursor and don't tell Windows where it is. The list then opens at the mouse; it still pastes where you were typing.
 - **A paste lands in the wrong window, or nowhere.** KlipShot pastes into the last window you used before it. Click into the place you want to paste, then open KlipShot (or use [quick paste](#quick-paste), which never leaves the app you're in). Apps running as administrator don't accept pastes sent by KlipShot unless KlipShot runs as administrator too. If that's what stopped the paste, or Windows won't switch back to your app, a notice says so and the clip is on the clipboard: press Ctrl+V there.
 - **KlipShot says it couldn't start.** If its database is damaged, say Yes to restore a backup. The damaged file is kept as `KlipShot.before-restore.db`.
-- **Copy beeps are sometimes missing**, often on a remote desktop or VDI. Turn on **Keep the sound ready so no beep is missed** in Tools → Settings → Sounds.
+- **Copy beeps are sometimes missing**, often on a remote desktop or VDI. Turn on **Keep the sound ready so no beep is missed** in Tools → Settings → Sounds and look. If only the first beep after a pause is still missing, as on Citrix, choose a shorter time for the faint pulse below it.
 - **Copy text from image finds nothing.** Windows reads the text in the languages set up in Windows; add the language's optical character recognition (see [Text in images](#text-in-images)). Handwriting and stylised lettering are often not read.
 - **Windows says "Windows protected your PC".** KlipShot isn't code-signed. Click **More info**, then **Run anyway**.

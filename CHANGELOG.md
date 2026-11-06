@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-06
+
+### Fixed
+- **No missing first beep on Citrix and other remote desktops.** With **Keep the sound ready so no beep is missed** on, Citrix could still pause its sound after a while of silence, so the first beep after a pause was lost. KlipShot now plays a faint pulse, far too quiet to hear, every 10 seconds to keep the sound awake. Change how often under Tools → Settings → Sounds and look: if the first beep after a pause is still missing, choose a shorter time.
+
 ## [1.1.0] - 2026-11-05
 
 ### Added
