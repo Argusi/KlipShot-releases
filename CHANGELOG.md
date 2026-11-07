@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-11-06
+
+### Fixed
+- **Copying something again moves it to the top again, as before 1.2.0.** 1.2.0 turned **Move a clip to the top when it's copied again** off at first, so repeated copies were saved twice. It's on again; untick it in Tools → Settings → History to save repeats as new clips. In folders, a repeated copy is still always a new clip.
+
 ## [1.2.0] - 2026-11-06
 
 ### Added
