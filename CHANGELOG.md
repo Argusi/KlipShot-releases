@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-11-06
+
+### Added
+- **Screen clips keep the text that was on screen.** When you clip a region, KlipShot asks the apps under it for their text and keeps it with the clip, so search, Show links and Copy text from image get it exactly, where reading the picture could misread links, emails, tracking numbers and file paths. It works in browsers, Word, Notepad, terminals and File Explorer's file list, among others; anything else is read from the picture as before. Turn it off under Tools → Settings → Screen clips.
+
 ## [1.2.1] - 2026-11-06
 
 ### Fixed

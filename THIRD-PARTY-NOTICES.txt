@@ -12,6 +12,12 @@ Copyright 2014-2024 SourceGear, LLC.
 Licensed under the Apache License, Version 2.0, reproduced below.
 KlipShot uses it, unchanged, to reach its clips database.
 
+Interop.UIAutomationClient 10.19041.0
+https://github.com/Roemer/UIAutomation-Interop
+Copyright (c) 2019 Roman.
+Licensed under the MIT License, reproduced below.
+KlipShot uses it, unchanged, to ask the apps under a screen clip for their text.
+
 Microsoft.Data.Sqlite 10.0.13
 https://github.com/dotnet/efcore
 Copyright (c) .NET Foundation and Contributors. Copyright (c) Microsoft Corporation.

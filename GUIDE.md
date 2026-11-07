@@ -189,6 +189,8 @@ To get the words out of an image clip (a screenshot of an error, a scanned page,
 
 KlipShot also reads the text in every image clip by itself, a moment after it's copied, so search finds image clips by the words in them.
 
+**Screen clips keep the text that was on screen.** When you clip a region (F9, or a delayed clip), KlipShot also asks the apps under it for their text, the way screen readers do, and keeps it with the clip. That text is exact, where reading the picture can mistake an `l` for a `1` or drop a long file path, so search, [Show links](#links-in-images) and Copy text from image use it. It works in most apps: browsers, Word, Notepad, terminals, File Explorer's file list. Apps that don't say what they show, words inside pictures, and remote desktops seen from outside are read from the picture as before. Because the text comes from the app, it can include the rest of a line that the clip cuts through. A whole-screen clip and a scrolling clip are read from the picture only. To turn it off, untick **Read the text on screen when I clip a region** in Tools → Settings → Screen clips.
+
 The reading is done by Windows, on your PC, in the languages set up in Windows. If Windows can't read any of them, KlipShot says how to add one (Windows Settings → Time & language → Language & region → your language's options → Optical character recognition). Handwriting and stylised lettering are often not read.
 
 ## Recipes
@@ -261,6 +263,8 @@ To turn them off, all or by type, go to Tools → Settings → Smart actions.
 ### Links in images
 
 This works on image clips too, using the words KlipShot reads in the picture: each link is marked on the image, right where it is. Text read from a picture can have mistakes, so point at a mark to see what will open before you click it. Links shown only as words, such as "Click here", can't be found, because the address isn't in the picture.
+
+In a screen clip that kept the [text that was on screen](#text-in-images), the links come from that text instead, so they're exactly as they were, and the status bar says so.
 
 A QR code is marked on the picture too. Point at it to see what it holds before you open it, as a code can lead anywhere. If it holds a link, phone number or email address, clicking opens it. If it holds Wi-Fi details, clicking connects to that network. Windows saves it but won't join it by itself later, and if you already have a saved network with that name, KlipShot asks before replacing it. If it holds anything else, clicking copies it to a new clip. For Wi-Fi details, KlipShot shows only the network's name, but **Copy to a new clip** includes the password.
 
