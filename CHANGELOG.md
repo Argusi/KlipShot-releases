@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-11-06
+
+### Added
+- **Number stamps in the markup editor.** The new Numbers tool (**N**) places numbered circles, 1, 2, 3 and so on, with each click, for step-by-step instructions. Undoing or deleting the last one gives its number back.
+- **Save an image clip as a file.** Select an image clip and press **Ctrl+S**, or right-click it → **Save image as file**, to save it as a PNG. Or drag it out of KlipShot into a folder, the desktop or an email.
+
+### Changed
+- **Copying something again saves it again, unless you choose otherwise.** Copying something that's already further down the InBox used to move that clip to the top. It's now saved again as a new clip, at the top. To have it move the clip you already have instead, turn on Tools → Settings → History → **Move a clip to the top when it's copied again**. In folders, a repeated copy is always a new clip, so folders stay as you arranged them. Copying the same thing twice in a row is still saved once.
+
 ## [1.1.1] - 2026-11-06
 
 ### Fixed

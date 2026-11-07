@@ -40,11 +40,11 @@ Clicking the tray icon opens or hides the window. Right-click it for **Open Klip
 
 KlipShot keeps text (with its formatting), images and copied files. The **InBox** is where new copies land, unless you have one of your [folders](#folders) open; it's the only place KlipShot removes old clips when it gets full (see [History size](#history-size)). New copies go to the top of the list. The list shows each clip's text or a thumbnail, when it was copied, the app it came from and its size. The preview pane at the bottom shows the selected clip in full.
 
-- **Copying the same thing again** right after doesn't save it twice; you hear two beeps instead of one. Copying something that's already further down the list moves that clip back to the top, with the new time and app.
+- **Copying the same thing again** right after doesn't save it twice; you hear two beeps instead of one. Copying something that's already further down the list saves it again as a new clip. To move the clip you already have back to the top instead, with the new time and app, turn on **Move a clip to the top when it's copied again** in Tools → Settings → History. That only applies in the InBox: in a folder, a repeated copy is always a new clip, so your folders stay as you arranged them.
 - **On the clipboard:** the clip that's on the clipboard right now has a clipboard icon next to its title, and the status bar and the tray icon's tooltip name it.
 - **Search:** type in the **Search clips** box at the right of the toolbar (or press Ctrl+F) to show only the clips in the open folder that contain that text. It looks in the clip's text, its name and title, file names, the app it came from and the words in its image. Press Down to move into the results, Enter to paste, and Esc (or ✕) to clear the search.
 - **Several clips:** Ctrl+click clips to select several, Shift+click to select a range, or Ctrl+A to select them all. Then press Del or right-click to delete, pin or move them all at once, or drag them onto a folder. KlipShot asks before deleting more than one clip. Paste and Copy use the clip you clicked last.
-- **Right-click** a clip for Paste, Copy, Paste as text, Edit image, Copy text from image, Rename, Pin to top, Move to (the top or bottom of the list, or a folder) and Delete.
+- **Right-click** a clip for Paste, Copy, Paste as text, Edit image, Copy text from image, Save image as file, Rename, Pin to top, Move to (the top or bottom of the list, or a folder) and Delete.
 
 ### Editing clips
 
@@ -122,6 +122,7 @@ While you drag, the clip or folder you're moving fades and its name follows the 
 
 - Drag a clip up or down the list to reorder. Drop it on the top half of a row to put it above that clip, or the bottom half to put it below. (Clear the search first.) Hold it near the top or bottom of the list to scroll.
 - Drag a clip onto a folder or the InBox to move it there. This works on locked folders too.
+- Drag an image clip out of KlipShot, into a folder, the desktop or an email, to drop it there as a PNG file. The clip stays in KlipShot.
 - Drag a folder near the top or bottom edge of another folder to put it above or below that one, or onto the middle of it to put it inside. Drop it on **Folders** to move it to the bottom of the top level.
 
 ## Screen clips
@@ -164,6 +165,7 @@ A screen clip opens in an editor, over the spot it came from (a tall scrolling c
 | Pen | P | Draw freehand |
 | Highlighter | H | A see-through box over text |
 | Text | T | Click, type, then Enter (Shift+Enter for a new line, Esc to cancel) |
+| Numbers | N | Click to place a numbered circle: 1, then 2, 3 and so on, for step-by-step instructions. The next number is one more than the highest on the picture, so undoing or deleting the last one gives its number back. The line width sets the size; with a number selected, picking a colour changes it |
 | Blur | B | Pixelates passwords, emails and other private details. The real pixels are replaced, so they can't be recovered |
 | Crop | C | Drag over the part to keep. While the Crop tool is on, the whole picture shows with the cut-off part dimmed, so you can drag the crop's handles to adjust it, or drag a new one |
 
@@ -178,6 +180,8 @@ Pick a colour and a line width on the toolbar (the width also sets the text size
 You can take more clips while an editor is open; each one gets its own editor.
 
 **Edit image:** to mark up an image clip you already have (a screen clip, or any image you copied), select it and press **Ctrl+E**, or right-click it → **Edit image**. Copy saves the result as a new clip just above the original, selects it and puts it on the clipboard. The original stays as it was.
+
+**Save an image clip as a file:** select it and press **Ctrl+S**, or right-click it → **Save image as file**, to save it as a PNG. It's named after the clip if you renamed it, otherwise after when it was copied. Or drag the clip out of KlipShot straight into a folder, the desktop or an email, and it goes there as a PNG file. Dragging it onto a folder in KlipShot still moves the clip.
 
 ## Text in images
 
@@ -361,6 +365,7 @@ In the KlipShot window:
 | Alt+Home, Alt+End | Move the clip to the top or bottom of the list |
 | Ctrl+E | Mark up an image clip |
 | Ctrl+T | Copy the words in an image clip as text |
+| Ctrl+S | Save an image clip as a PNG file (with a text clip being edited, saves the changes) |
 | Del | Delete the clip (or all the selected clips) |
 | Ctrl+click, Shift+click | Select several clips, or a range of clips |
 | Ctrl+A | Select every clip in the list |
@@ -400,7 +405,7 @@ In any app, while KlipShot runs:
 | Smart rules | [Add your own patterns](#your-own-rules) to Show links |
 | Keys | Every KlipShot key, whether it works, and [Try again](#keys) |
 | Starting up | Start KlipShot when I sign in to Windows, Show the window when KlipShot starts, Import from a portable copy |
-| History | [Clips to keep in the InBox](#history-size), [private copies](#where-your-clips-are-stored) |
+| History | [Clips to keep in the InBox](#history-size), [moving a clip copied again to the top](#the-clip-list), [private copies](#where-your-clips-are-stored) |
 | Backups | [Automatic backups, Back up now and Restore](#backups) |
 | Screen clips | How long a delayed clip waits; copying clips straight to the clipboard without the editor |
 | Sounds and look | [Sounds](#sounds), always on top, button labels |
