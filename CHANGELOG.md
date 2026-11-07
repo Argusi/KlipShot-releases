@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.3.1] - 2026-11-06
+
+### Added
+- **Edit button in the preview.** With an image clip selected, click **Edit** next to the zoom buttons above the preview to mark it up, instead of right-clicking the clip. Ctrl+E and the right-click menu still work.
+
 ## [1.3.0] - 2026-11-06
 
 ### Added

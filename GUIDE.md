@@ -179,7 +179,7 @@ Pick a colour and a line width on the toolbar (the width also sets the text size
 
 You can take more clips while an editor is open; each one gets its own editor.
 
-**Edit image:** to mark up an image clip you already have (a screen clip, or any image you copied), select it and press **Ctrl+E**, or right-click it → **Edit image**. Copy saves the result as a new clip just above the original, selects it and puts it on the clipboard. The original stays as it was.
+**Edit image:** to mark up an image clip you already have (a screen clip, or any image you copied), select it and click **Edit** above the preview, press **Ctrl+E**, or right-click it → **Edit image**. Copy saves the result as a new clip just above the original, selects it and puts it on the clipboard. The original stays as it was.
 
 **Save an image clip as a file:** select it and press **Ctrl+S**, or right-click it → **Save image as file**, to save it as a PNG. It's named after the clip if you renamed it, otherwise after when it was copied. Or drag the clip out of KlipShot straight into a folder, the desktop or an email, and it goes there as a PNG file. Dragging it onto a folder in KlipShot still moves the clip.
 
