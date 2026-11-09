@@ -270,7 +270,7 @@ A QR code is marked on the picture too. Point at it to see what it holds before 
 
 ### What gets picked up
 
-**Paths** can start with a drive, a network share such as `\\server\share`, or a variable such as `%AppData%`. A path on your PC is only picked up if it exists, and a line number after it, as in `C:\app\main.cs(12,5)`, is left out. Paths on network, USB and disc drives aren't checked, as they can be slow to answer, and they need quotes if they have spaces. Clicking a file selects it in File Explorer and never runs it.
+**Paths** can start with a drive, a network share such as `\\server\share`, or a variable such as `%AppData%`. A path on your PC is only picked up if it exists, and a line number after it, as in `C:\app\main.cs(12,5)`, is left out. A network share path with spaces, such as `\\server\share\Work Projects\plan.docx`, is checked in the background, so the Show links button can take a moment to appear. If the server doesn't answer within 3 seconds, the path ends at the first space. Paths on mapped network drives, USB and disc drives aren't checked, as they can be slow to answer, and they need quotes if they have spaces. Clicking a file selects it in File Explorer and never runs it.
 
 **Dates** can be written like `Nov 4`, `Tue Nov 4 at 2pm`, `4 November 2026`, `11/4/2026`, `2026-11-04`, `next Tuesday` or `tomorrow at 3pm`, and can have a time range such as `2-3:30pm`, before or after the date. Point at a date to see how it was read.
 

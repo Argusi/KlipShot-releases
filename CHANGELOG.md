@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.3.2] - 2026-11-09
+
+### Fixed
+- **Network paths with spaces are found whole.** Show links stopped `\\server\share\Work Projects\plan.docx` at the first space unless it was in quotes. Now KlipShot asks the server which part exists, in the background so the window never pauses, and waiting up to 3 seconds so a server Windows has to connect to first is still found. A server that doesn't answer in time is skipped for a minute, and its paths end at the first space as before.
+
 ## [1.3.1] - 2026-11-06
 
 ### Added
