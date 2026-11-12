@@ -7,7 +7,7 @@ KlipShot used to be called Clippy.
 ![KlipShot window showing the InBox, its folders and a letter to a noisy neighbour in the preview pane](docs/screenshot.png)
 
 - Keeps text (with its formatting), images and copied files, and finds any of them with search.
-- Paste any clip back with Enter or a double-click, or paste text with a change such as Plain text, UPPERCASE or Single line.
+- Paste any clip back with Enter or a double-click, or paste text with a change such as Plain text, UPPERCASE or Single line, or turn a table from Excel into Markdown or HTML and back.
 - Quick paste: press Ctrl+Alt+V while typing anywhere to pick a clip from a small list at the text cursor.
 - PowerPaste: paste a run of clips one after another with Ctrl+V.
 - Rename clips, pin them to the top, and file them into folders, which can hold folders of their own. Lock a folder to keep it as it is.

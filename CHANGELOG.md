@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-11-11
+
+### Added
+- **Paste tables as Markdown, HTML or for Excel.** Copy a range from Excel or a table from a web page, and Paste as text offers **Markdown table** and **HTML table**, ready for GitHub, chat apps, AI chats, wikis and email. It works the other way too: a Markdown table or HTML table code pastes into Excel cell by cell with **Table for Excel (tab-separated)**. Columns of numbers line up on the right in Markdown. These choices only appear when the clip is a table. Formulas and cell formatting aren't carried over, only the text in each cell.
+
 ## [1.3.2] - 2026-11-09
 
 ### Fixed
