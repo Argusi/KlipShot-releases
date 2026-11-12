@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-11-11
+
+### Added
+- **Filter search by kind and date.** Click **All clips ▾** next to the search box to show only text, images, files or text with links, and only clips copied today, yesterday, in the last 7 or 30 days, or longer ago. It works with or without search text, and Esc clears it with the search.
+
 ## [1.4.0] - 2026-11-11
 
 ### Added
