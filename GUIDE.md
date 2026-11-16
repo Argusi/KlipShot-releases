@@ -455,7 +455,7 @@ KlipShot remembers the window's size and position, how you've dragged the border
 
 Your clips and settings (`KlipShot.db`) are kept. If KlipShot's folder isn't writable (for example under `Program Files`), it offers to open the download page instead; then quit KlipShot and replace `KlipShot.exe` by hand. You can also update by hand at any time: run the new setup, or, for the portable copy, quit KlipShot and replace `KlipShot.exe`.
 
-KlipShot isn't code-signed, so Windows SmartScreen or antivirus may now and then be wary of a freshly downloaded `KlipShot.exe` or setup. That's the same whether KlipShot updates itself or you download it by hand.
+KlipShot is code-signed (the publisher shows as Bruce David Maloney), but while the signature is new, Windows SmartScreen or antivirus may now and then be wary of a freshly downloaded `KlipShot.exe` or setup. That's the same whether KlipShot updates itself or you download it by hand.
 
 To check automatically, turn on **Check for updates when KlipShot starts** in Tools → Settings → Updates. It is off unless you turn it on. KlipShot then checks at most once a day, a few seconds after it starts. It says nothing when you are up to date or offline. When there is a newer version, a notice appears by the clock, and clicking it asks whether to update.
 
@@ -493,4 +493,4 @@ Everything stays on your PC. KlipShot only connects to the internet when you cho
 - **KlipShot says it couldn't start.** If its database is damaged, say Yes to restore a backup. The damaged file is kept as `KlipShot.before-restore.db`.
 - **Copy beeps are sometimes missing**, often on a remote desktop or VDI. Turn on **Keep the sound ready so no beep is missed** in Tools → Settings → Sounds and look. If only the first beep after a pause is still missing, as on Citrix, choose a shorter time for the faint pulse below it.
 - **Copy text from image finds nothing.** Windows reads the text in the languages set up in Windows; add the language's optical character recognition (see [Text in images](#text-in-images)). Handwriting and stylised lettering are often not read.
-- **Windows says "Windows protected your PC".** KlipShot isn't code-signed. Click **More info**, then **Run anyway**.
+- **Windows says "Windows protected your PC".** KlipShot's code signature is new and still building up trust with Microsoft. Click **More info**, then **Run anyway**.

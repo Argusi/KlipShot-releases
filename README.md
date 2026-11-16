@@ -25,7 +25,7 @@ Each release on [Releases](https://github.com/Argusi/KlipShot-releases/releases)
 - **Setup:** download `KlipShot-<version>-win-x64-setup.exe` and run it. It installs KlipShot just for you into `%LocalAppData%\Programs\KlipShot` and adds it to the Start menu.
 - **Portable:** download `KlipShot-<version>-win-x64.zip`, unzip it into any folder (or a USB stick) and run `KlipShot.exe`. Your clips are kept in that folder.
 
-KlipShot isn't code-signed, so the first time you run it, Windows SmartScreen may say "Windows protected your PC". Click **More info**, then **Run anyway**. No .NET install is needed.
+KlipShot is code-signed, but while its signature is new, the first time you run it Windows SmartScreen may still say "Windows protected your PC". Click **More info**, then **Run anyway**. No .NET install is needed.
 
 KlipShot starts in the tray: look under the **^** by the clock. Drag the paperclip icon onto the taskbar to keep it in view.
 

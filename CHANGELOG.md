@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.5.1] - 2026-11-15
+
+### Changed
+- KlipShot.exe, the setup and the uninstaller are now code-signed: Windows shows the publisher as Bruce David Maloney instead of "Unknown publisher".
+
 ## [1.5.0] - 2026-11-11
 
 ### Added
