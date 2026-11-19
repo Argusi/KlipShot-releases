@@ -96,7 +96,7 @@ For pasting several clips in a row, for example into a form:
 
 You can also start from [quick paste](#quick-paste): right-click a clip and choose **Start PowerPaste here, then down the list** or **up the list**. If you've typed a search, it pastes only the matching clips. KlipShot's window stays closed.
 
-While PowerPaste is on, the tray icon has an orange dot, and pointing at it shows which clip is next, such as **3 of 10**.
+While PowerPaste is on, the tray icon has an orange dot, and pointing at it shows which clip is next, such as **3 of 10**. To paste a clip of the run without its formatting, press the [paste plain text](#pasting) key (**Ctrl+Shift+V**) instead of Ctrl+V; PowerPaste moves on to the next clip just the same.
 
 It stops by itself at the end of the list, and after 2 minutes without a paste, so Ctrl+V goes back to normal if you forget it; a notice says so, and clicking it opens the setting. To change the wait (15, 30 or 45 seconds, 1 or 2 minutes, or Never), use **Stop PowerPaste after no paste for** in Tools → Settings → Pasting. To stop sooner, click **Stop PowerPaste**, which shows on the toolbar while PowerPaste is on (it is also in the tray menu). Starting PowerPaste during a search pastes only the matching clips. The first time you start PowerPaste, KlipShot explains how it works.
 
@@ -392,6 +392,7 @@ In any app, while KlipShot runs:
 | F9 | Clip a region of the screen |
 | Print Screen | Clip the whole screen |
 | Ctrl+V while PowerPaste is on | Paste the next clip |
+| Ctrl+Shift+V while PowerPaste is on | Paste the next clip as plain text |
 
 **Help → Keyboard shortcuts** lists them too. These keys don't work while an app running as administrator is in front (see [Troubleshooting](#troubleshooting)).
 

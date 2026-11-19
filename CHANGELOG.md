@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.6.1] - 2026-11-19
+
+### Fixed
+- **Paste plain text works with PowerPaste.** While PowerPaste was on, Ctrl+Shift+V could paste the next clip with its formatting and leave PowerPaste out of step. Now it pastes the current clip as plain text and moves on to the next one, as Ctrl+V does. Opening quick paste with its key no longer moves PowerPaste on either.
+
 ## [1.6.0] - 2026-11-18
 
 ### Added
