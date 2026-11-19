@@ -398,7 +398,7 @@ In any app, while KlipShot runs:
 
 ### Changing keys
 
-![Tools → Settings → Keys, listing quick paste and the four screen clip keys, each with its key and whether it's working](docs/keys.png)
+![Tools → Settings → Keys, listing quick paste, paste plain text and the four screen clip keys, each with its key and whether it's working](docs/keys.png)
 
 - **Where:** Tools → Settings → **Keys** lists every KlipShot key: quick paste, paste plain text, clip a region, clip the whole screen, the delayed clip and the scrolling clip. The last two have no key at first.
 - **Choices:** screen clips can use F7, F8, F9, Ctrl+Shift+F9, Print Screen, Ctrl+Print Screen or none. Quick paste can use Ctrl+Alt+V, Alt+Shift+V, Ctrl+Shift+V, Ctrl+Alt+Space or none. Paste plain text can use Ctrl+Shift+V, Ctrl+Alt+Shift+V, Alt+Shift+V or none; if you had already given quick paste Ctrl+Shift+V, it keeps it and paste plain text starts with no key. A key another KlipShot feature already uses isn't offered.
