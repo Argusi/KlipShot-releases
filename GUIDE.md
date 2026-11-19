@@ -63,6 +63,8 @@ Select a clip and press **Enter**, double-click it, or click **Paste** on the to
 
 **Paste as text** (on the toolbar, in the Edit menu, or by right-clicking a clip) pastes text with a change applied: Plain text, UPPERCASE, lowercase, Title Case, Remove extra spaces, Single line (join lines), Remove blank lines, or Clean up links (remove tracking). The saved clip stays as it was.
 
+**Paste plain text:** in any app, press **Ctrl+Shift+V** to paste what you copied without its formatting: no fonts, colours or links, just the words. Nothing is saved as a new clip, and what you copied keeps its formatting, so Ctrl+V still pastes it as it was. Browsers, Word and some other apps, such as Slack, use Ctrl+Shift+V for this already; while KlipShot runs, KlipShot does it for them, and in every other app too. To keep an app's own Ctrl+Shift+V, pick a different key under [Keys](#changing-keys).
+
 When the clip is a table, Paste as text also offers table changes. A range copied from Excel or a table copied from a web page can be pasted as a **Markdown table** (for GitHub, Discord, Teams, notes apps and AI chats) or an **HTML table** (for web pages and email). A Markdown table or HTML table code can be pasted as a **Table for Excel (tab-separated)**, which fills the cells one by one. Only the text in each cell is carried over, not formulas or formatting.
 
 **Clean up links** removes tracking tags such as `utm_…` and `fbclid` from every web link in the text. Product links from Amazon, eBay, AliExpress, Walmart and Etsy are cut down to just the product, so a long Amazon link becomes `https://www.amazon.com/dp/B0H2C4RDN6`. A chosen variant (size, colour) and affiliate tags, such as Amazon's `tag=`, are kept. Other pages on those sites, such as a search, only lose their tracking tags. YouTube links keep the video and start time. Target, Best Buy, LinkedIn, X (Twitter), Instagram, TikTok, Reddit and Spotify links lose those sites' own share and tracking tags. Redirect links from Google search results, Facebook, Instagram, Outlook Safe Links, YouTube descriptions, LinkedIn and Reddit are swapped for the link they lead to, which is then cleaned too. After pasting, a notice says what was removed, such as "Removed 9 tracking tags in 1 link." Short links such as `a.co/…` or `amzn.to/…` are left as they are, since KlipShot can't see where they lead without opening them.
@@ -82,7 +84,7 @@ Press **Ctrl+Alt+V** while you're typing in any app. A small list of your InBox 
 - **Right-click** a clip to paste it as plain text, without its formatting, or with another Paste as text change, such as UPPERCASE or Single line.
 - Esc, Ctrl+Alt+V again or clicking somewhere else closes the list.
 
-Pinned clips show a pin. Ctrl+Alt+V is Paste Special in Word and Excel, so those apps don't get it while KlipShot runs. To use a different key (Alt+Shift+V, Ctrl+Shift+V, Ctrl+Alt+Space, or none), see [Keys](#keys).
+Pinned clips show a pin. Ctrl+Alt+V is Paste Special in Excel and older Word, and pastes copied formatting (with Ctrl+Alt+C) in newer Word, so those apps don't get it while KlipShot runs. To use a different key (Alt+Shift+V, Ctrl+Shift+V, Ctrl+Alt+Space, or none), see [Keys](#keys).
 
 ## PowerPaste
 
@@ -386,6 +388,7 @@ In any app, while KlipShot runs:
 | Key | What it does |
 | --- | --- |
 | Ctrl+Alt+V | [Quick paste](#quick-paste) |
+| Ctrl+Shift+V | [Paste plain text](#pasting) |
 | F9 | Clip a region of the screen |
 | Print Screen | Clip the whole screen |
 | Ctrl+V while PowerPaste is on | Paste the next clip |
@@ -396,8 +399,8 @@ In any app, while KlipShot runs:
 
 ![Tools → Settings → Keys, listing quick paste and the four screen clip keys, each with its key and whether it's working](docs/keys.png)
 
-- **Where:** Tools → Settings → **Keys** lists every KlipShot key: quick paste, clip a region, clip the whole screen, the delayed clip and the scrolling clip. The last two have no key at first.
-- **Choices:** screen clips can use F7, F8, F9, Ctrl+Shift+F9, Print Screen, Ctrl+Print Screen or none. Quick paste can use Ctrl+Alt+V, Alt+Shift+V, Ctrl+Shift+V, Ctrl+Alt+Space or none. A key another KlipShot feature already uses isn't offered.
+- **Where:** Tools → Settings → **Keys** lists every KlipShot key: quick paste, paste plain text, clip a region, clip the whole screen, the delayed clip and the scrolling clip. The last two have no key at first.
+- **Choices:** screen clips can use F7, F8, F9, Ctrl+Shift+F9, Print Screen, Ctrl+Print Screen or none. Quick paste can use Ctrl+Alt+V, Alt+Shift+V, Ctrl+Shift+V, Ctrl+Alt+Space or none. Paste plain text can use Ctrl+Shift+V, Ctrl+Alt+Shift+V, Alt+Shift+V or none; if you had already given quick paste Ctrl+Shift+V, it keeps it and paste plain text starts with no key. A key another KlipShot feature already uses isn't offered.
 - **Status:** each key shows **✓ Working**, **No key**, or **⚠ Another program has this key**. While KlipShot runs, other programs don't get its keys, but a program that took a key first keeps it. KlipShot also tells you at startup which keys are taken; click that notice to open this page.
 - **Try again:** close the program that has the key, then click **Try again**. Or pick a different key.
 

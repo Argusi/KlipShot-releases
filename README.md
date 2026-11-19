@@ -8,6 +8,7 @@ KlipShot used to be called Clippy.
 
 - Keeps text (with its formatting), images and copied files, and finds any of them with search, narrowed to one kind or to today, yesterday, the last week or month.
 - Paste any clip back with Enter or a double-click, or paste text with a change such as Plain text, UPPERCASE or Single line, or turn a table from Excel into Markdown or HTML and back.
+- Paste plain text: press Ctrl+Shift+V in any app to paste what you copied without its formatting.
 - Quick paste: press Ctrl+Alt+V while typing anywhere to pick a clip from a small list at the text cursor.
 - PowerPaste: paste a run of clips one after another with Ctrl+V.
 - Rename clips, pin them to the top, and file them into folders, which can hold folders of their own. Lock a folder to keep it as it is.

@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.6.0] - 2026-11-18
+
+### Added
+- **Paste plain text with Ctrl+Shift+V.** In any app, Ctrl+Shift+V pastes what you copied without its formatting. Nothing is saved as a new clip, and what you copied keeps its formatting for the next Ctrl+V. Change the key, or turn it off, in Tools → Settings → Keys. If quick paste already uses Ctrl+Shift+V, it keeps it, and paste plain text starts with no key.
+
 ## [1.5.1] - 2026-11-15
 
 ### Changed
