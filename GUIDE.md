@@ -96,7 +96,9 @@ For pasting several clips in a row, for example into a form:
 
 You can also start from [quick paste](#quick-paste): right-click a clip and choose **Start PowerPaste here, then down the list** or **up the list**. If you've typed a search, it pastes only the matching clips. KlipShot's window stays closed.
 
-While PowerPaste is on, the tray icon has an orange dot, and pointing at it shows which clip is next, such as **3 of 10**. To paste a clip of the run without its formatting, press the [paste plain text](#pasting) key (**Ctrl+Shift+V**) instead of Ctrl+V; PowerPaste moves on to the next clip just the same.
+While PowerPaste is on, the tray icon has an orange dot, and pointing at it shows which clip is next, such as **3 of 10**. To paste a clip of the run without its formatting, press the [paste plain text](#pasting) key (**Ctrl+Shift+V**) instead of Ctrl+V; PowerPaste moves on to the next clip just the same. Shift+Insert counts as a paste too.
+
+If something else goes on the clipboard during PowerPaste (you copy in another app, paste or copy a clip from KlipShot, or take a screen clip), PowerPaste stops and a notice says so, rather than skip the clip it was about to paste. In an app running as administrator, Windows hides Ctrl+V from KlipShot, so each paste there is the same clip; a notice says so when such an app comes to the front.
 
 It stops by itself at the end of the list, and after 2 minutes without a paste, so Ctrl+V goes back to normal if you forget it; a notice says so, and clicking it opens the setting. To change the wait (15, 30 or 45 seconds, 1 or 2 minutes, or Never), use **Stop PowerPaste after no paste for** in Tools → Settings → Pasting. To stop sooner, click **Stop PowerPaste**, which shows on the toolbar while PowerPaste is on (it is also in the tray menu). Starting PowerPaste during a search pastes only the matching clips. The first time you start PowerPaste, KlipShot explains how it works.
 

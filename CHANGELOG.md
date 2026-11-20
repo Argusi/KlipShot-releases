@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [1.6.2] - 2026-11-19
+
+### Fixed
+- **PowerPaste no longer skips a clip when something else is copied.** Copying in another app, pasting or copying a clip from KlipShot, or taking a screen clip during PowerPaste used to push PowerPaste's next clip aside, and it was never pasted. Now PowerPaste stops and says so, and Ctrl+V pastes what you just copied.
+- **PowerPaste warns about apps running as administrator.** Windows hides Ctrl+V in those apps from KlipShot, so each paste there was the same clip. A notice now says so the first time such an app comes to the front.
+- **PowerPaste counts Shift+Insert as a paste**, as recipes do, and no longer counts a Ctrl+V typed in KlipShot's own windows, such as the quick paste search box.
+- **Paste plain text on a waiting recipe.** The recipe now goes on waiting for the next Ctrl+V, {{clipboard}} is what you copied before the recipe, the filled-in text is saved as a clip, and pasting it as it is no longer fails.
+- **Paste plain text keeps a new copy.** Something copied during the half second after a plain paste is no longer replaced by the earlier formatted copy.
+
 ## [1.6.1] - 2026-11-19
 
 ### Fixed
